@@ -477,40 +477,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2446817270311985667, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2446817270311985667, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
-      propertyPath: speed
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 5
+      propertyPath: acc
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
       propertyPath: burstSpeed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
-      propertyPath: acc
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: drag
-      value: 0.143
+      propertyPath: maxSpeed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7441804910729915853, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}

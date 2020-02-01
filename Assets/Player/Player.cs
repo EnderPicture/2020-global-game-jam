@@ -7,16 +7,21 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
 
     public float burstSpeed = 0;
+
+    [Range(0.0f, 1.0f)]
     public float acc = 0;
     public float maxSpeed = 0;
 
     [Range(0.0f, 1.0f)]
     public float drag = 0;
 
+    public float jumpStrength;
 
-    int lastDirection;
+    int lastXDirection;
+    int lastYDirection;
 
-    float speed = 0;
+    float xSpeed = 0;
+    float ySpeed = 0;
     Rigidbody rigidbody;
     void Start()
     {
@@ -26,37 +31,68 @@ public class Player : MonoBehaviour
     {
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
-        int direction = 0;
+        int xDirection = 0;
+        int yDirection = 0;
 
+        if (vertical > 0)
+        {
+            yDirection = 1;
+        }
+        else if (vertical < 0)
+        {
+            yDirection = -1;
+        }
+        
 
         if (horizontal > 0)
         {
-            direction = 1;
+            xDirection = 1;
         }
         else if (horizontal < 0)
         {
-            direction = -1;
+            xDirection = -1;
         }
 
 
-        if (direction != lastDirection && direction != 0)
+        if (yDirection != lastYDirection && yDirection != 0)
         {
-            speed = burstSpeed * direction;
+            rigidbody.AddForce(0, jumpStrength, 0, ForceMode.VelocityChange);
+            // ySpeed = burstSpeed * yDirection;
         }
-        else if (direction != 0)
+        else if (xDirection != 0)
         {
-            speed += acc * direction;
+            // ySpeed += maxSpeed * acc * yDirection;
         }
         else
         {
-            speed -= speed * drag;
+            // ySpeed -= ySpeed * drag;
+            // ySpeed -= gravity;
         }
+        lastYDirection = yDirection;
+        
 
-        lastDirection = direction;
+        if (xDirection != lastXDirection && xDirection != 0)
+        {
+            xSpeed = burstSpeed * xDirection;
+        }
+        else if (xDirection != 0)
+        {
+            xSpeed += maxSpeed * acc * xDirection;
+        }
+        else
+        {
+            xSpeed -= xSpeed * drag;
+        }
+        lastXDirection = xDirection;
+        xSpeed = Mathf.Clamp(xSpeed, -maxSpeed, maxSpeed);
+        // ySpeed = Mathf.Clamp(ySpeed, -maxSpeed, maxSpeed);
 
-        speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
+
+        Debug.Log(xSpeed);
+
         Vector3 velocity = rigidbody.velocity;
-        velocity.x = speed;
+        velocity.x = xSpeed;
+        // velocity.y = ySpeed;
         rigidbody.velocity = velocity;
 
     }
