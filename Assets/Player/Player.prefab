@@ -158,6 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27a481e304515a4a851ae966a1b1b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burstSpeed: 3
+  acc: 2
+  maxSpeed: 5
+  drag: 0.143
 --- !u!136 &1929705298283058072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -186,5 +190,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
+  m_Constraints: 120
   m_CollisionDetection: 0
