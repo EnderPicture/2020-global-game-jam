@@ -540,36 +540,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7556389787973162005}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1995530224 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1995530224, guid: 44bc4eb337f68b543b37567822f73b06,
-    type: 3}
-  m_PrefabInstance: {fileID: 7556389787973162005}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54752156d05d039469c289c89f1847cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &1995530225 stripped
-SphereCollider:
-  m_CorrespondingSourceObject: {fileID: 1995530225, guid: 44bc4eb337f68b543b37567822f73b06,
-    type: 3}
-  m_PrefabInstance: {fileID: 7556389787973162005}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2102698599 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2102698599, guid: 44bc4eb337f68b543b37567822f73b06,
-    type: 3}
-  m_PrefabInstance: {fileID: 7556389787973162005}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40f0b14a706fec46bb56da1b5c05940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5063308020723051841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -646,45 +616,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1220174293, guid: 44bc4eb337f68b543b37567822f73b06, type: 3}
-      propertyPath: m_Height
-      value: 1.132118
-      objectReference: {fileID: 0}
-    - target: {fileID: 1220174293, guid: 44bc4eb337f68b543b37567822f73b06, type: 3}
-      propertyPath: m_Center.y
-      value: -0.13794363
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995530224, guid: 44bc4eb337f68b543b37567822f73b06, type: 3}
-      propertyPath: trigger
-      value: 
-      objectReference: {fileID: 1995530225}
-    - target: {fileID: 2102698598, guid: 44bc4eb337f68b543b37567822f73b06, type: 3}
-      propertyPath: m_Height
-      value: 2.9505765
-      objectReference: {fileID: 0}
-    - target: {fileID: 2102698598, guid: 44bc4eb337f68b543b37567822f73b06, type: 3}
-      propertyPath: m_Center.y
-      value: 1.2109491
-      objectReference: {fileID: 0}
-    - target: {fileID: 2102698599, guid: 44bc4eb337f68b543b37567822f73b06, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 1995530224}
-    - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: boostJump
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: accJump
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
-        type: 3}
-      propertyPath: oneWayGroundCheck
-      value: 
-      objectReference: {fileID: 2102698599}
     - target: {fileID: 7441804910729915853, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
       propertyPath: m_LocalPosition.x

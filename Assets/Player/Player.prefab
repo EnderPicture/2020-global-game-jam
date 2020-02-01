@@ -124,9 +124,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1.8998168
+  m_Height: 1.132118
   m_Direction: 1
-  m_Center: {x: 0, y: 0.24590576, z: 0}
+  m_Center: {x: 0, y: -0.13794363, z: 0}
 --- !u!114 &1220174294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 1929705298283058072}
+  groundCheck: {fileID: 1995530224}
 --- !u!136 &2102698598
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -197,9 +198,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.5210276
+  m_Height: 2.9505765
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4257236, z: 0}
+  m_Center: {x: 0, y: 1.2109491, z: 0}
 --- !u!1 &2453519401117990252
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54752156d05d039469c289c89f1847cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1995530225}
 --- !u!1 &6114127538630124170
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,9 +342,10 @@ MonoBehaviour:
   accX: 10
   maxSpeedX: 8
   dampX: 15
-  boostJump: 20
-  accJump: 70
+  boostJump: 17
+  accJump: 50
   accJumpDuration: 0.5
+  oneWayGroundCheck: {fileID: 2102698599}
   groundCheck: {fileID: 1995530224}
 --- !u!136 &1929705298283058072
 CapsuleCollider:
