@@ -23,7 +23,7 @@ public class OneWayGroundCheck : MonoBehaviour
     {
         Debug.Log("godown");
         Collider ground = groundCheck.getGround();
-        if (ground != null)
+        if (ground != null && ground.tag == "OneWay")
         {
             Physics.IgnoreCollision(playerCollider, ground, true);
         }
