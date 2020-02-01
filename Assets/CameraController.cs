@@ -7,6 +7,8 @@ public class CameraController : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset;
+
+    public float smoothness = 1;
     void Start()
     {
         
@@ -15,6 +17,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.DOMove(target.position + offset, 1);
+        Vector3 pos = target.position + offset;
+        transform.DOMove(new Vector3(pos.x, offset.y, pos.z), smoothness);
     }
 }

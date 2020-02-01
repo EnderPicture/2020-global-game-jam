@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     public float accJump;
     public float accJumpDuration;
 
+
+    public GroundCheck groundCheck;
+
     float lastJump;
 
     void Start()
@@ -65,7 +68,7 @@ public class Player : MonoBehaviour
 
         if (direction.y != lastDirection.y && direction.y != 0)
         {
-            if (direction.y > 0)
+            if (direction.y > 0 && groundCheck.isOnGround())
             {
                 rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
                 lastJump = Time.realtimeSinceStartup;
@@ -82,7 +85,7 @@ public class Player : MonoBehaviour
         }
 
 
-        
+
 
         rb.velocity = velocity;
         lastDirection = direction;

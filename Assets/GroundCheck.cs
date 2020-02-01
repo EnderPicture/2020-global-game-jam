@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    bool onGround = false;
+    void OnTriggerEnter(Collider other)
     {
-        
+        onGround = true;
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        onGround = false;
+    }
+    public bool isOnGround() {
+        return onGround;
     }
 }
