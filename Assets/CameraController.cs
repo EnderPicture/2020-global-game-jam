@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
-public class test : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform target;
+    public Vector3 offset;
     void Start()
     {
         
@@ -13,6 +15,6 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.DOMove(target.position + offset, 1);
     }
 }

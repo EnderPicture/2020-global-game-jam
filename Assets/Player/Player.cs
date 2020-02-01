@@ -4,96 +4,87 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody rb;
+    Vector2 lastDirection;
 
-    public float burstSpeed = 0;
+    public float boostX;
+    public float accX;
+    public float maxSpeedX;
+    public float dampX;
 
-    [Range(0.0f, 1.0f)]
-    public float acc = 0;
-    public float maxSpeed = 0;
+    public float boostJump;
+    public float accJump;
+    public float accJumpDuration;
 
-    [Range(0.0f, 1.0f)]
-    public float drag = 0;
+    float lastJump;
 
-    public float jumpStrength;
-
-    int lastXDirection;
-    int lastYDirection;
-
-    float xSpeed = 0;
-    float ySpeed = 0;
-    Rigidbody rigidbody;
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        lastJump = Time.realtimeSinceStartup;
     }
     void FixedUpdate()
     {
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
-        int xDirection = 0;
-        int yDirection = 0;
 
-        if (vertical > 0)
-        {
-            yDirection = 1;
-        }
-        else if (vertical < 0)
-        {
-            yDirection = -1;
-        }
-        
+        Vector2 direction = new Vector2(0, 0);
+        Vector3 velocity = rb.velocity;
 
         if (horizontal > 0)
         {
-            xDirection = 1;
+            direction.x = 1;
         }
         else if (horizontal < 0)
         {
-            xDirection = -1;
+            direction.x = -1;
+        }
+        if (vertical > 0)
+        {
+            direction.y = 1;
+        }
+        else if (vertical < 0)
+        {
+            direction.y = -1;
         }
 
 
-        if (yDirection != lastYDirection && yDirection != 0)
+        if (direction.x != lastDirection.x && direction.x != 0)
         {
-            rigidbody.AddForce(0, jumpStrength, 0, ForceMode.VelocityChange);
-            // ySpeed = burstSpeed * yDirection;
+            velocity.x = boostX * direction.x;
         }
-        else if (xDirection != 0)
+        else if (direction.x != 0)
         {
-            // ySpeed += maxSpeed * acc * yDirection;
+            rb.AddForce(accX * direction.x * (maxSpeedX - Mathf.Abs(velocity.x)), 0, 0);
         }
         else
         {
-            // ySpeed -= ySpeed * drag;
-            // ySpeed -= gravity;
+            rb.AddForce(-velocity.x * dampX, 0, 0);
         }
-        lastYDirection = yDirection;
+
+
+        if (direction.y != lastDirection.y && direction.y != 0)
+        {
+            if (direction.y > 0)
+            {
+                rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
+                lastJump = Time.realtimeSinceStartup;
+            }
+        }
+        else if (direction.y != 0)
+        {
+            if (direction.y > 0)
+            {
+                float timeUsage = Helper.Map(Time.realtimeSinceStartup - lastJump, 0, accJumpDuration, 1, 0);
+                timeUsage = Mathf.Clamp(timeUsage, 0, 1);
+                rb.AddForce(0, accJump * timeUsage, 0);
+            }
+        }
+
+
         
 
-        if (xDirection != lastXDirection && xDirection != 0)
-        {
-            xSpeed = burstSpeed * xDirection;
-        }
-        else if (xDirection != 0)
-        {
-            xSpeed += maxSpeed * acc * xDirection;
-        }
-        else
-        {
-            xSpeed -= xSpeed * drag;
-        }
-        lastXDirection = xDirection;
-        xSpeed = Mathf.Clamp(xSpeed, -maxSpeed, maxSpeed);
-        // ySpeed = Mathf.Clamp(ySpeed, -maxSpeed, maxSpeed);
-
-
-        Debug.Log(xSpeed);
-
-        Vector3 velocity = rigidbody.velocity;
-        velocity.x = xSpeed;
-        // velocity.y = ySpeed;
-        rigidbody.velocity = velocity;
-
+        rb.velocity = velocity;
+        lastDirection = direction;
     }
 }

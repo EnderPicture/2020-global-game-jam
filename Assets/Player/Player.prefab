@@ -81,6 +81,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2453519401117990252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7507959557263362514}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7507959557263362514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453519401117990252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7441804910729915853}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6114127538630124170
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +140,7 @@ Transform:
   m_Children:
   - {fileID: 621092069}
   m_Father: {fileID: 7441804910729915853}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9172217505950842822
 GameObject:
@@ -142,6 +172,7 @@ Transform:
   m_LocalPosition: {x: 1.0792668, y: 2.6504765, z: 0.87109375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 7507959557263362514}
   - {fileID: 3761145454868878818}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -158,10 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27a481e304515a4a851ae966a1b1b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  burstSpeed: 3
-  acc: 2
-  maxSpeed: 5
-  drag: 0.143
+  boostX: 6
+  accX: 10
+  maxSpeedX: 8
+  dampX: 15
+  boostJump: 20
+  accJump: 70
+  accJumpDuration: 0.5
 --- !u!136 &1929705298283058072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -169,7 +203,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9172217505950842822}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 719f35daa0d47d74486e5ce0ae67babf, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -189,6 +223,6 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
