@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    bool onGround = false;
+    Collider ground = null;
+    public Collider trigger;
     void OnTriggerEnter(Collider other)
     {
-        onGround = true;
+        ground = other;
     }
     void OnTriggerExit(Collider other)
     {
-        onGround = false;
+        ground = null;
     }
     public bool isOnGround() {
-        return onGround;
+        return ground != null;
+    }
+    public Collider getGround() {
+        return ground;
     }
 }

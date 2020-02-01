@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public float accJump;
     public float accJumpDuration;
 
+    public OneWayGroundCheck oneWayGroundCheck;
+
 
     public GroundCheck groundCheck;
 
@@ -72,6 +74,9 @@ public class Player : MonoBehaviour
             {
                 rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
                 lastJump = Time.realtimeSinceStartup;
+            }
+            if (direction.y < 0 && groundCheck.isOnGround()) {
+                oneWayGroundCheck.goDown();
             }
         }
         else if (direction.y != 0)
