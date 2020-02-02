@@ -372,7 +372,7 @@ MonoBehaviour:
   accJumpDuration: 0.4
   vertical: 0
   horizontal: 1
-  deathTime: 0.3
+  deathTime: 0.6
   oneWayGroundCheck: {fileID: 2102698599}
   attackHitboxes: []
   groundCheck: {fileID: 1995530224}

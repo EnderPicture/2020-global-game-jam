@@ -130,10 +130,10 @@ public class enemy : MonoBehaviour
             isDead = true;
             Destroy(gameObject, deathTime);
             animator.Play("GatorDeath");
-            int horizontal = Random.Range(0,7) * 100 + 700 * direction;
-            int vertical = Random.Range(0, 5) * 100 + 900;
+            int horizontal = (Random.Range(0,7) * 10 + 40);
+            int vertical = Random.Range(0, 5) * 10 + 30;
             Vector3 force = new Vector3(horizontal, vertical, 0);
-            rb.AddForce(force);
+            rb.AddForce(force, ForceMode.Impulse);
         }
         
     }
