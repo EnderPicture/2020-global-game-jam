@@ -52,6 +52,5 @@ public class UIPlayerHealth : MonoBehaviour
     public void SetValue(int health, bool hasHealth)
     {
         aGrid[health].enabled = hasHealth;
-        Debug.Log("UIBARCALLED HP Lost");
     }
 }

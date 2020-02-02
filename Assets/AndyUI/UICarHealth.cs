@@ -42,7 +42,6 @@ public class UICarHealth : MonoBehaviour
 
     public void SetValue(int health, bool hasHealth)
     {
-        Debug.Log("UIBARCALLED HP Lost");
         aGrid[health].enabled = hasHealth;
     }
 }

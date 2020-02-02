@@ -21,7 +21,6 @@ public class OneWayGroundCheck : MonoBehaviour
 
     public void goDown()
     {
-        Debug.Log("godown");
         Collider ground = groundCheck.getGround();
         if (ground != null && ground.tag == "OneWay")
         {

@@ -41,17 +41,14 @@ public class carController : MonoBehaviour
             invincibleTimer = timeInvincible;
         }
 
-        Debug.Log(currentHealth);
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
-        Debug.Log(currentHealth);
 
         if (amount == 1)
             hp.SetValue(currentHealth - 1, true);
         else
             hp.SetValue(currentHealth, false);
 
-        Debug.Log("Health Changed");
     }
 }

@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     public Transform tl;
     public Transform br;
 
+    public Transform car;
+
     public static int RAND = 0;
     public int mode = RAND;
     public int amount = 10;
@@ -24,6 +26,7 @@ public class Spawner : MonoBehaviour
             {
                 int rand = Random.Range(0, enemies.Length);
                 GameObject newEnemy = GameObject.Instantiate(enemies[rand]);
+                newEnemy.GetComponent<enemy>().car = car;
                 newEnemy.transform.position = new Vector3(Random.Range(tl.position.x, br.position.x), Random.Range(br.position.y, tl.position.y), 0);
                 newEnemy.transform.parent = container.transform;
             }

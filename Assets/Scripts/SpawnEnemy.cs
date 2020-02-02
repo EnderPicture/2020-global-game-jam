@@ -6,6 +6,8 @@ public class SpawnEnemy : MonoBehaviour
 {
     float timer = 0;
 
+    public Transform car;
+
     public Spawner spawner1;
     public Spawner spawner2;
     public Spawner spawner3;
@@ -14,7 +16,10 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawner1.car = car;
+        spawner2.car = car;
+        spawner3.car = car;
+        spawner4.car = car;
     }
 
     // Update is called once per frame

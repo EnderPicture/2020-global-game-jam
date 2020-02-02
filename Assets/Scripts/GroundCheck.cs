@@ -9,10 +9,12 @@ public class GroundCheck : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         ground = other;
+        Debug.Log("onground");
     }
     void OnTriggerExit(Collider other)
     {
         ground = null;
+        Debug.Log("offground");
     }
     public bool isOnGround() {
         return ground != null;

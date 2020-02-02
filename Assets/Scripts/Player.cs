@@ -55,12 +55,14 @@ public class Player : MonoBehaviour
 
         if (horizontal > 0)
         {
-            spriteR.flipX = true;
+            transform.localScale = new Vector3(-1,1,1);
+            // spriteR.flipX = true;
             direction.x = 1;
         }
         else if (horizontal < 0)
         {
-            spriteR.flipX = false;
+            transform.localScale = new Vector3(1,1,1);
+            // spriteR.flipX = false;
             direction.x = -1;
         }
         if (vertical > 0)
