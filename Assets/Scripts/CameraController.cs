@@ -12,6 +12,6 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         Vector3 pos = target.position + offset;
-        transform.DOMove(new Vector3(pos.x, offset.y, pos.z - 20.0f), smoothness);
+        transform.DOMove(new Vector3(pos.x, offset.y, pos.z), smoothness);
     }
 }
