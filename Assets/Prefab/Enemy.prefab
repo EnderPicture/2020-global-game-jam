@@ -320,11 +320,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7441804910729915853}
-  - component: {fileID: 7396635878411591743}
+  - component: {fileID: 6295647263258103050}
   - component: {fileID: 1929705298283058072}
   - component: {fileID: 2446817270311985667}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,7 +347,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7396635878411591743
+--- !u!114 &6295647263258103050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9172217505950842822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27a481e304515a4a851ae966a1b1b1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0642c275bb24be04da8748ae45ba90e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boostX: 6
