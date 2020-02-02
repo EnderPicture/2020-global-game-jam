@@ -32,6 +32,8 @@ public class enemy : MonoBehaviour
 
     float lastJump;
 
+    public UICarHealth theuicarhealth;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -128,4 +130,13 @@ public class enemy : MonoBehaviour
 
         //Destroy(gameObject, deathTime);
     }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.tag == "car")
+        {
+            other.gameObject.GetComponent<carController>().ChangeHealth(-1);
+        }
+    }
+
 }

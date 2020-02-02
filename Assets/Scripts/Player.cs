@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
 
     public Collider[] attackHitboxes;
     public GroundCheck groundCheck;
+    public SpriteRenderer spriteR;
+    public Animator animator;
 
     float lastJump;
 
@@ -53,10 +55,12 @@ public class Player : MonoBehaviour
 
         if (horizontal > 0)
         {
+            spriteR.flipX = true;
             direction.x = 1;
         }
         else if (horizontal < 0)
         {
+            spriteR.flipX = false;
             direction.x = -1;
         }
         if (vertical > 0)
@@ -135,6 +139,7 @@ public class Player : MonoBehaviour
                 {
                     //car[0] do stuff
                     attackTimer = attackCooldown;
+
                 }
             }
         }
