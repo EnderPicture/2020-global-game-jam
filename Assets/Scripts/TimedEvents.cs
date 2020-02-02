@@ -12,6 +12,7 @@ public class TimedEvents : MonoBehaviour
     bool Event1 = false;
     bool Event2 = false;
     bool Event3 = false;
+    bool Flying = false;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class TimedEvents : MonoBehaviour
         if (Car.currentHealth >= 20 && Event0 == false) Spawn0();
         if (Car.currentHealth >= 25 && Event1 == false) Spawn1();
         if (Car.currentHealth >= 40 && Event2 == false) Spawn2();
+        if (Car.currentHealth >= 50) Flying = true;
         if (Car.currentHealth >= 75 && Event3 == false) Spawn3();
 
         void Spawn0 ()

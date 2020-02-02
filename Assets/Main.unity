@@ -1247,6 +1247,18 @@ MonoBehaviour:
   maxHealthReached: 0
   hp: {fileID: 1008743706}
   player: {fileID: 1430373440}
+  carSprites:
+  - {fileID: 21300000, guid: d2779f1f9027efa4fa4d83dacc9057ae, type: 3}
+  - {fileID: 21300000, guid: 58e308f2648b5484c840ddb39cd1802e, type: 3}
+  - {fileID: 21300000, guid: 556e4ee0775d23945bf4eeef5261e8f6, type: 3}
+  - {fileID: 21300000, guid: 172caac84d625da43b582c0957cad3f7, type: 3}
+  - {fileID: 21300000, guid: 0ff8634bac02ec04486cb1a063bbb0d4, type: 3}
+  - {fileID: 21300000, guid: 83d685a035b07e54db8601a449d5873d, type: 3}
+  - {fileID: 21300000, guid: e92aa01c7f0d766448facc7ce315d146, type: 3}
+  - {fileID: 21300000, guid: be5becac64001d347b4d5bcf03fdcca2, type: 3}
+  - {fileID: 21300000, guid: 77fb7769b8d77e240a897baea15d5bf9, type: 3}
+  - {fileID: 21300000, guid: 6581ef325be34b54ea3d0b12fe5ccce5, type: 3}
+  spriteRenderer: {fileID: 1665579990}
 --- !u!114 &1665579993
 MonoBehaviour:
   m_ObjectHideFlags: 0
