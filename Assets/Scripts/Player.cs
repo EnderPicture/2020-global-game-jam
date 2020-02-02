@@ -184,7 +184,8 @@ public class Player : MonoBehaviour
         if (attackTimer <= 0)
         {
             Collider[] enemyColliderInfo = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("Enemy"));
-            if (enemyColliderInfo.Length != 0) 
+            Collider[] flyingColliderInfo = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("FlyingObject"));
+            if (enemyColliderInfo.Length != 0 || flyingColliderInfo.Length != 0) 
             {
                 attack.Play();
                 for (int e = 0; e < enemyColliderInfo.Length; e++)
@@ -192,8 +193,13 @@ public class Player : MonoBehaviour
                     enemy Enemy = enemyColliderInfo[e].gameObject.GetComponent<enemy>();
                     if (Enemy != null) { Enemy.damage(1, -transform.localScale.x); }
                 }
+                for (int e = 0; e < flyingColliderInfo.Length; e++)
+                {
+                    enemy Enemy = flyingColliderInfo[e].gameObject.GetComponent<enemy>();
+                    if (Enemy != null) { Enemy.damage(1, -transform.localScale.x); }
+                }
                 attackTimer = attackCooldown;
-            }
+            } 
             else if(repairTimer <= 0)
             {
                 Collider[] car = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("car"));
