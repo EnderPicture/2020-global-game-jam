@@ -1016,6 +1016,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c6b77b184ce134e83843addec1b81e, type: 3}
+--- !u!114 &1430373440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
+    type: 3}
+  m_PrefabInstance: {fileID: 7556389787973162005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27a481e304515a4a851ae966a1b1b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437510168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1241,12 @@ MonoBehaviour:
   maxHealth: 100
   timeInvincible: 2
   currentHealth: 0
+  catchUp: 5
+  catchUpRepairCooldown: 0.25
+  defRepairCooldown: 1
+  maxHealthReached: 0
   hp: {fileID: 1008743706}
+  player: {fileID: 1430373440}
 --- !u!114 &1665579993
 MonoBehaviour:
   m_ObjectHideFlags: 0
