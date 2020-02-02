@@ -12,6 +12,7 @@ public class TimedEvents : MonoBehaviour
     bool Event1 = false;
     bool Event2 = false;
     bool Event3 = false;
+    bool Event4 = false;
     bool Flying = false;
 
     // Update is called once per frame
@@ -20,8 +21,9 @@ public class TimedEvents : MonoBehaviour
         if (Car.currentHealth >= 20 && Event0 == false) Spawn0();
         if (Car.currentHealth >= 25 && Event1 == false) Spawn1();
         if (Car.currentHealth >= 40 && Event2 == false) Spawn2();
-        if (Car.currentHealth >= 50) Flying = true;
-        if (Car.currentHealth >= 75 && Event3 == false) Spawn3();
+        if (Car.currentHealth >= 50 && Event3 == false) Spawn3();
+        if (Car.currentHealth >= 55) Flying = true;
+        if (Car.currentHealth >= 75 && Event4 == false) Spawn4();
 
         void Spawn0 ()
         {
@@ -46,13 +48,15 @@ public class TimedEvents : MonoBehaviour
 
         void Spawn3 ()
         {
-            //Create RedEnemy at SpawnLocation1;
-            // Create RedEnemy at SpawnLocation1;
-            //Create RedEnemy at SpawnLocation2;
-            //Create RedEnemy at SpawnLocation2;
-            // Create RedEnemy at SpawnLocation3;
-            // Create RedEnemy at SpawnLocation4;
+        spawnEnemy.spawnXPatternObject(true,false,true,false, RedEnemy);
+        spawnEnemy.spawnXPatternObject(false,true,false,true, FastEnemy);
             Event3 = true;
+        }
+        void Spawn4 ()
+        {
+        //spawnEnemy.spawnXPatternObject(true,false,true,false, RedEnemy);
+        //spawnEnemy.spawnXPatternObject(false,true,false,true, FastEnemy);
+            //Event4 = true;
         }
     }
 }
