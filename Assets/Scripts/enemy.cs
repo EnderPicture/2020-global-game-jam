@@ -36,6 +36,8 @@ public class enemy : MonoBehaviour
 
     public UICarHealth theuicarhealth;
 
+    public Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -123,7 +125,8 @@ public class enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            animator.Play("GatorDeath");
+            Destroy(gameObject, 3.0f);
             //add velocity feels good send
         }
         
