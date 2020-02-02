@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     public float accJump;
     public float accJumpDuration;
 
+    public float attackCooldown;
+    public float attackTimer;
+
     public OneWayGroundCheck oneWayGroundCheck;
 
     public Collider[] attackHitboxes;
@@ -28,16 +31,20 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         lastJump = Time.realtimeSinceStartup;
     }
+    void Update()
+    {
+        if(attackTimer > 0)
+        {
+            attackTimer -= Time.deltaTime;
+        } 
+    }
     void FixedUpdate()
     {
-        movement();
-        if(Input.GetKeyDown(KeyCode.J)) {
+        
+        if (Input.GetKeyDown(KeyCode.J)) {
             LaunchAttack(attackHitboxes[0]);
         }
-    }
 
-    void movement() 
-    {
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -83,7 +90,8 @@ public class Player : MonoBehaviour
                 rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
                 lastJump = Time.realtimeSinceStartup;
             }
-            if (direction.y < 0 && groundCheck.isOnGround()) {
+            if (direction.y < 0 && groundCheck.isOnGround())
+            {
                 oneWayGroundCheck.goDown();
             }
         }
@@ -103,12 +111,29 @@ public class Player : MonoBehaviour
         rb.velocity = velocity;
         lastDirection = direction;
     }
-
+    
     void LaunchAttack(Collider col) {
-        Collider[] cols = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
-        foreach(Collider c in cols) {
-            Debug.Log(c.name);
+        // maybe make it so cooldown only animation
+        Collider[] ene = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
+        if (ene.Length != 0)
+        {
+            foreach (Collider e in ene)
+            {
+                Debug.Log(e.name);
+                // enemy do stuff
+            }
+            attackTimer = attackCooldown;
         }
+        else
+        {
+            Collider[] car = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Car"));
+            if (car.Length != 0)
+            {
+                //car[0] do stuff
+                attackTimer = attackCooldown;
+            }
+        }
+
         
     }
 }
