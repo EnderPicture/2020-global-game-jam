@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     public SpriteRenderer spriteR;
     public Animator animator;
 
+    public AudioSource walk;
+    public AudioSource attack;
+
     float lastJump;
 
     void Start()
@@ -46,14 +49,11 @@ public class Player : MonoBehaviour
         // Key Activate Attack
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))  //changed key cuz j is dumb
         {
-            Debug.Log("WE HIT BUTTON!");
             LaunchAttack(attackHitboxes[0]);
         }
     } // Update 
     void FixedUpdate()
     {
-    
-
     // Movement 
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -65,9 +65,15 @@ public class Player : MonoBehaviour
         if (horizontal > 0) {
             transform.localScale = new Vector3(-1, 1, 1);
             direction.x = 1;
+            if( !walk.isPlaying )
+                walk.Play();
         } else if (horizontal < 0) {
             transform.localScale = new Vector3(1, 1, 1);
             direction.x = -1;
+            if (!walk.isPlaying)
+                walk.Play();
+        } else {
+            walk.Stop();
         }
 
         if (vertical > 0)
@@ -113,6 +119,7 @@ public class Player : MonoBehaviour
 
     void LaunchAttack(Collider objCollider)
     {
+        attack.Play();
         // maybe make it so cooldown only animation
         if (attackTimer <= 0)
         {
