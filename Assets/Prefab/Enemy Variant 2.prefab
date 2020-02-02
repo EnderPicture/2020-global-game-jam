@@ -7,6 +7,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1220174291, guid: 80cc78d2b8c90f34fbf5f10fef9675b0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102698596, guid: 80cc78d2b8c90f34fbf5f10fef9675b0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102698598, guid: 80cc78d2b8c90f34fbf5f10fef9675b0, type: 3}
+      propertyPath: m_Height
+      value: 2.4542384
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102698598, guid: 80cc78d2b8c90f34fbf5f10fef9675b0, type: 3}
+      propertyPath: m_Center.y
+      value: 1.4591181
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453519401117990252, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114127538630124170, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: noise
@@ -76,6 +102,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507959557263362514, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609292280539274249, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9172217505950842822, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}

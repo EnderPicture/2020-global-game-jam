@@ -10,13 +10,13 @@ public class OneWayGroundCheck : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         Physics.IgnoreCollision(playerCollider, other, true);
-        Physics.IgnoreCollision(groundCheck.trigger, other, true);
+        // Physics.IgnoreCollision(groundCheck.trigger, other, true);
     }
 
     public void onExitTriggerExit(Collider other)
     {
         Physics.IgnoreCollision(playerCollider, other, false);
-        Physics.IgnoreCollision(groundCheck.trigger, other, false);
+        // Physics.IgnoreCollision(groundCheck.trigger, other, false);
     }
 
     public void goDown()

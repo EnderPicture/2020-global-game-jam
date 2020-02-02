@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float boostJump;
     public float accJump;
     public float accJumpDuration;
+    public float maxSpeedY;
 
     public float attackCooldown;
     public float attackTimer;
@@ -35,15 +36,16 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if(attackTimer > 0)
+        if (attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
-        } 
+        }
     }
     void FixedUpdate()
     {
-        
-        if (Input.GetKeyDown(KeyCode.J)) {
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
             LaunchAttack(attackHitboxes[0]);
         }
 
@@ -55,13 +57,13 @@ public class Player : MonoBehaviour
 
         if (horizontal > 0)
         {
-            transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = new Vector3(-1, 1, 1);
             // spriteR.flipX = true;
             direction.x = 1;
         }
         else if (horizontal < 0)
         {
-            transform.localScale = new Vector3(1,1,1);
+            transform.localScale = new Vector3(1, 1, 1);
             // spriteR.flipX = false;
             direction.x = -1;
         }
@@ -81,7 +83,7 @@ public class Player : MonoBehaviour
         }
         else if (direction.x != 0)
         {
-            rb.AddForce(accX * direction.x * (maxSpeedX - Mathf.Abs(velocity.x)), 0, 0);
+            rb.AddForce(accX * direction.x * Mathf.Clamp(maxSpeedX - (velocity.x * direction.x), 0, maxSpeedX), 0, 0);
         }
         else
         {
@@ -113,20 +115,20 @@ public class Player : MonoBehaviour
 
 
 
-
         rb.velocity = velocity;
         lastDirection = direction;
     }
-    
-    void LaunchAttack(Collider col) {
+
+    void LaunchAttack(Collider col)
+    {
         // maybe make it so cooldown only animation
-        if(attackTimer <= 0)
+        if (attackTimer <= 0)
         {
             Collider[] ene = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
             if (ene.Length != 0)
             {
-                
-                for(int e = 0; e < ene.Length; e++)
+
+                for (int e = 0; e < ene.Length; e++)
                 {
 
                     enemy Enemy = ene[e].gameObject.GetComponent<enemy>();
