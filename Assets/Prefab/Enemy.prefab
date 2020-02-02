@@ -235,8 +235,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7609292280539274249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -1.1, z: -0.87109375}
-  m_LocalScale: {x: 0.39463, y: 0.39463, z: 0.39463}
+  m_LocalPosition: {x: 0.4, y: -0.8, z: -0.87109375}
+  m_LocalScale: {x: 0.3101792, y: 0.3101792, z: 0.3101792}
   m_Children: []
   m_Father: {fileID: 3761145454868878818}
   m_RootOrder: 0
@@ -280,8 +280,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8899517865795084660, guid: a75637749e7bc3e4999ca3805c1462c4,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: bec9f9d518e4105489dc84d00eab8b0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -366,6 +365,8 @@ MonoBehaviour:
   boostJump: 14
   accJump: 140
   accJumpDuration: 0.4
+  vertical: 0
+  horizontal: 1
   oneWayGroundCheck: {fileID: 2102698599}
   attackHitboxes: []
   groundCheck: {fileID: 1995530224}
@@ -379,7 +380,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 719f35daa0d47d74486e5ce0ae67babf, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.79726875
   m_Height: 2.2912836
   m_Direction: 1
   m_Center: {x: 0, y: 1.1514177, z: 0}
