@@ -114,26 +114,27 @@ public class Player : MonoBehaviour
     
     void LaunchAttack(Collider col) {
         // maybe make it so cooldown only animation
-        Collider[] ene = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
-        if (ene.Length != 0)
+        if(attackTimer <= 0)
         {
-            foreach (Collider e in ene)
+            Collider[] ene = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
+            if (ene.Length != 0)
             {
-                Debug.Log(e.name);
-                // enemy do stuff
-            }
-            attackTimer = attackCooldown;
-        }
-        else
-        {
-            Collider[] car = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Car"));
-            if (car.Length != 0)
-            {
-                //car[0] do stuff
+                foreach (Collider e in ene)
+                {
+                    Debug.Log(e.name);
+                    // enemy do stuff
+                }
                 attackTimer = attackCooldown;
             }
-        }
-
-        
+            else
+            {
+                Collider[] car = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Car"));
+                if (car.Length != 0)
+                {
+                    //car[0] do stuff
+                    attackTimer = attackCooldown;
+                }
+            }
+        }      
     }
 }
