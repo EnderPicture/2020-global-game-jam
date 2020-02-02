@@ -7,12 +7,15 @@ public class TimedEvents : MonoBehaviour
     public GameObject Enemy;
     public GameObject RedEnemy;
     public GameObject FastEnemy;
+    public GameObject GreenEnemy;
     public SpawnEnemy spawnEnemy;
     bool Event0 = false;
     bool Event1 = false;
     bool Event2 = false;
     bool Event3 = false;
     bool Event4 = false;
+    bool Event5 = false;
+    bool Event6 = false;
     bool Flying = false;
 
     // Update is called once per frame
@@ -22,8 +25,10 @@ public class TimedEvents : MonoBehaviour
         if (Car.currentHealth >= 25 && Event1 == false) Spawn1();
         if (Car.currentHealth >= 40 && Event2 == false) Spawn2();
         if (Car.currentHealth >= 50 && Event3 == false) Spawn3();
-        if (Car.currentHealth >= 55) Flying = true;
-        if (Car.currentHealth >= 75 && Event4 == false) Spawn4();
+        //if (Car.currentHealth >= 55) Flying = true;
+        if (Car.currentHealth >= 60 && Event4 == false) Spawn4();
+        if (Car.currentHealth >= 70 && Event5 == false) Spawn5();
+        //if (Car.currentHealth >= 80 && Event6 == false) Spawn6();
 
         void Spawn0 ()
         {
@@ -54,9 +59,21 @@ public class TimedEvents : MonoBehaviour
         }
         void Spawn4 ()
         {
-        //spawnEnemy.spawnXPatternObject(true,false,true,false, RedEnemy);
-        //spawnEnemy.spawnXPatternObject(false,true,false,true, FastEnemy);
-            //Event4 = true;
+        spawnEnemy.spawnXPatternObject(true,true,true,true, RedEnemy);
+        spawnEnemy.spawnXPatternObject(true,false,true,false, FastEnemy);
+            Event4 = true;
         }
+        void Spawn5 ()
+        {
+        spawnEnemy.spawnXPatternObject(true,true,true,true, RedEnemy);
+        spawnEnemy.spawnXPatternObject(true,true,true,true, FastEnemy);
+            Event5 = true;
+        }
+       // void Spawn6 ()
+       // {
+       // spawnEnemy.spawnXPatternObject(true,false,true,false, GreenEnemy);
+       // spawnEnemy.spawnXPatternObject(true,true,true,true, FastEnemy);
+       //     Event6 = true;
+       // }
     }
 }
