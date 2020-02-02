@@ -60,10 +60,16 @@ public class enemy : MonoBehaviour
             // go to car 
             float distanceToCar = car.position.x - transform.position.x;
             if (distanceToCar > 0)
+            {
                 horizontal = 1; // right 
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+                
             else
+            {
                 horizontal = -1; // left
-
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
             Vector2 direction = new Vector2(0, 0);
             Vector3 velocity = rb.velocity;
 
