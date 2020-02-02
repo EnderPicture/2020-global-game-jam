@@ -163,8 +163,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: enemy_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 1920
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: enemy_2
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 3840
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: enemy_3
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 5760
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: enemy_4
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 7680
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: enemy_5
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 9600
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: enemy_6
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 11520
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: enemy_7
       rect:
         serializedVersion: 2
-        x: 3584
+        x: 13440
         y: 0
-        width: 512
-        height: 288
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
