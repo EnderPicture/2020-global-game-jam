@@ -13,6 +13,7 @@ public class enemy : MonoBehaviour
     Rigidbody rb;
     Vector2 lastDirection;
 
+    public int attack = -3;
     public float boostX;
     public float accX;
     public float maxSpeedX;
@@ -143,7 +144,7 @@ public class enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "car")
         {
-            other.gameObject.GetComponent<carController>().ChangeHealth(-1);
+            other.gameObject.GetComponent<carController>().ChangeHealth(attack);
         }
     }
 

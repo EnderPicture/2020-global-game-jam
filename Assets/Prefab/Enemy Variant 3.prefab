@@ -53,6 +53,11 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
+        type: 3}
+      propertyPath: attack
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7441804910729915853, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: m_LocalPosition.x

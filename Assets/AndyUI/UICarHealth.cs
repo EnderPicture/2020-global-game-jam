@@ -42,6 +42,6 @@ public class UICarHealth : MonoBehaviour
 
     public void SetValue(int health, bool hasHealth)
     {
-        aGrid[health].enabled = hasHealth;
+        // aGrid[health].enabled = hasHealth;
     }
 }

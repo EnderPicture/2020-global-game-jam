@@ -26,7 +26,7 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 2)
+        if (timer >= 1.5)
         {
             float randomspawn;
             randomspawn = Random.Range(0, 3);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class carController : MonoBehaviour
 {
     public int maxHealth = 100; //100 not 10
-    public float timeInvincible = 1.0f;
+    public float timeInvincible = 0f;
 
     public int currentHealth;
     public int health { get { return currentHealth; } }
