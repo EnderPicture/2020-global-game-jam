@@ -36,72 +36,60 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+        // Attack Timing
         if (attackTimer > 0)
-        {
             attackTimer -= Time.deltaTime;
-        }
-    }
+    } // Update 
     void FixedUpdate()
     {
-
-        if (Input.GetKeyDown(KeyCode.J))
+    // Key Activate Attack
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) )  //changed key cuz j is dumb
         {
             LaunchAttack(attackHitboxes[0]);
         }
 
+    // Movement 
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
-
+    
         Vector2 direction = new Vector2(0, 0);
         Vector3 velocity = rb.velocity;
 
-        if (horizontal > 0)
-        {
+    // Key Activate Move Player
+        if (horizontal > 0) {
             transform.localScale = new Vector3(-1, 1, 1);
-            // spriteR.flipX = true;
             direction.x = 1;
-        }
-        else if (horizontal < 0)
-        {
+        } else if (horizontal < 0) {
             transform.localScale = new Vector3(1, 1, 1);
-            // spriteR.flipX = false;
             direction.x = -1;
         }
+
         if (vertical > 0)
-        {
             direction.y = 1;
-        }
         else if (vertical < 0)
-        {
             direction.y = -1;
-        }
 
-
-        if (direction.x != lastDirection.x && direction.x != 0)
-        {
+    // Movement Feeling
+        if (direction.x != lastDirection.x && direction.x != 0) {
             velocity.x = boostX * direction.x;
-        }
-        else if (direction.x != 0)
-        {
+        } else if (direction.x != 0) {
             rb.AddForce(accX * direction.x * Mathf.Clamp(maxSpeedX - (velocity.x * direction.x), 0, maxSpeedX), 0, 0);
-        }
-        else
-        {
+        } else {
             rb.AddForce(-velocity.x * dampX, 0, 0);
         }
 
-
+    // Up Down Movement
         if (direction.y != lastDirection.y && direction.y != 0)
         {
+            // Go Up
             if (direction.y > 0 && groundCheck.isOnGround())
             {
                 rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
                 lastJump = Time.realtimeSinceStartup;
             }
+            // Go Down
             if (direction.y < 0 && groundCheck.isOnGround())
-            {
                 oneWayGroundCheck.goDown();
-            }
         }
         else if (direction.y != 0)
         {
@@ -113,39 +101,37 @@ public class Player : MonoBehaviour
             }
         }
 
-
-
         rb.velocity = velocity;
         lastDirection = direction;
-    }
+    } // FixedUpdate
 
-    void LaunchAttack(Collider col)
+    void LaunchAttack(Collider objCollider)
     {
         // maybe make it so cooldown only animation
         if (attackTimer <= 0)
         {
-            Collider[] ene = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
-            if (ene.Length != 0)
+            Collider[] enemyColliderInfo = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("Enemy"));
+            if (enemyColliderInfo.Length != 0) 
             {
-
-                for (int e = 0; e < ene.Length; e++)
+                for (int e = 0; e < enemyColliderInfo.Length; e++)
                 {
-
-                    enemy Enemy = ene[e].gameObject.GetComponent<enemy>();
+                    enemy Enemy = enemyColliderInfo[e].gameObject.GetComponent<enemy>();
                     if (Enemy != null) { Enemy.damage(1); }
                 }
                 attackTimer = attackCooldown;
             }
             else
             {
-                Collider[] car = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Car"));
+                Collider[] car = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("car"));
                 if (car.Length != 0)
                 {
-                    //car[0] do stuff
+                    Debug.Log ("UICarHealth?");
+                    carController thecar = car[0].gameObject.GetComponent<carController>();
+                    thecar.ChangeHealth(1);
+                    Debug.Log (thecar.currentHealth);
                     attackTimer = attackCooldown;
-
                 }
             }
         }
-    }
-}
+    } // Launch Attack
+} // Class Player

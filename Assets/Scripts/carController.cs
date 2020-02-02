@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class carController : MonoBehaviour
 {
-    public int maxHealth = 10;
-    public float timeInvincible = 2.0f;
+    public int maxHealth = 100; //100 not 10
+    public float timeInvincible = 1f;
 
-    int currentHealth;
+    public int currentHealth;
     public int health { get { return currentHealth; } }
 
+    bool tryMakeInvincible;
     bool isInvincible;
     float invincibleTimer;
     public UICarHealth hp;
@@ -17,18 +18,28 @@ public class carController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 10;
+        currentHealth = 20;
+        tryMakeInvincible = false;
+        isInvincible = false;
+        hp.UpdateValues(currentHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
+        if(tryMakeInvincible && ! isInvincible)
+        {
+            isInvincible = true;
+            invincibleTimer = timeInvincible;
+        }
+        tryMakeInvincible = false;
     }
 
     public void ChangeHealth(int amount)
@@ -37,18 +48,11 @@ public class carController : MonoBehaviour
         {
             if (isInvincible)
                 return;
-            isInvincible = true;
-            invincibleTimer = timeInvincible;
+            tryMakeInvincible = true;
         }
 
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-
-
-        if (amount == 1)
-            hp.SetValue(currentHealth - 1, true);
-        else
-            hp.SetValue(currentHealth, false);
-
+        hp.UpdateValues(currentHealth);
     }
 }

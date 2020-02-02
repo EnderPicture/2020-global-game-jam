@@ -26,35 +26,32 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 2)
+        if (timer >= 1.5)
         {
             float randomspawn;
             randomspawn = Random.Range(0, 3);
 
             if (randomspawn == 0)
-            {
                 Spawn0();
-            }
             if (randomspawn == 1)
-            {
                 Spawn1();
-            }
             if (randomspawn == 2)
-            {
                 Spawn2();
-            }
             if (randomspawn == 3)
-            {
                 Spawn3();
-            }
-
-
             timer = 0;
         }
+    } // update
 
-
-
-
+    public void spawnXPatternObject(bool s1, bool s2, bool s3, bool s4, GameObject go) {
+        if (s1)
+        spawner1.spawnGameObject(go);
+        if (s2)
+        spawner2.spawnGameObject(go);
+        if (s3)
+        spawner3.spawnGameObject(go);
+        if (s4)
+        spawner4.spawnGameObject(go);
     }
     void Spawn0()
     {

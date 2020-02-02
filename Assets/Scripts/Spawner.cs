@@ -32,4 +32,10 @@ public class Spawner : MonoBehaviour
             }
         }
     }
+    public void spawnGameObject(GameObject go) {
+        GameObject newEnemy = GameObject.Instantiate(go);
+        newEnemy.GetComponent<enemy>().car = car;
+        newEnemy.transform.position = new Vector3(Random.Range(tl.position.x, br.position.x), Random.Range(br.position.y, tl.position.y), 0);
+        newEnemy.transform.parent = container.transform;
+    }
 }

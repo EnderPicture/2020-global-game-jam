@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 3576193551710793853}
   - component: {fileID: 6730214016470470732}
   - component: {fileID: 3532610828145635648}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7609292280539274249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -1.1, z: -0.87109375}
+  m_LocalPosition: {x: 0.01, y: -1.1, z: 0}
   m_LocalScale: {x: 0.39463, y: 0.39463, z: 0.39463}
   m_Children: []
   m_Father: {fileID: 3761145454868878818}
@@ -311,7 +311,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8899517865795084660, guid: a75637749e7bc3e4999ca3805c1462c4,
+  m_Sprite: {fileID: -2311659948842064771, guid: a75637749e7bc3e4999ca3805c1462c4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -462,7 +462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9172217505950842822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0792668, y: 2.6504765, z: 0.87109375}
+  m_LocalPosition: {x: 1.0792668, y: 2.6504765, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7507959557263362514}
@@ -491,6 +491,7 @@ MonoBehaviour:
   boostJump: 14
   accJump: 140
   accJumpDuration: 0.4
+  maxSpeedY: 0
   attackCooldown: 0
   attackTimer: 0
   oneWayGroundCheck: {fileID: 2102698599}

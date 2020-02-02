@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OneWay
   - car
+  - CarTrigger
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Enemy
   - car
   - Player
-  - 
+  - carTriggerCounter
   - 
   - 
   - 
