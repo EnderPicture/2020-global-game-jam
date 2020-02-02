@@ -18,7 +18,7 @@ public class carController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 20;
+        currentHealth = 10;
         tryMakeInvincible = false;
         isInvincible = false;
         hp.UpdateValues(currentHealth);
