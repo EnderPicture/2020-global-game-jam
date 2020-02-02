@@ -122,7 +122,7 @@ public class enemy : MonoBehaviour
         }
     }
 
-    public void damage(int damage, int direction)
+    public void damage(int damage, float direction)
     {
         health -= damage;
         if (health <= 0)
@@ -130,10 +130,12 @@ public class enemy : MonoBehaviour
             isDead = true;
             Destroy(gameObject, deathTime);
             animator.Play("GatorDeath");
-            int horizontal = Random.Range(0,7) * 100 + 700 * direction;
-            int vertical = Random.Range(0, 5) * 100 + 900;
-            Vector3 force = new Vector3(horizontal, vertical, 0);
-            rb.AddForce(force);
+            int mod = direction > 0 ? 1 : -1;
+            int horizontal =(Random.Range(0,3) * 20 + 20) * mod;
+            int vertical = Random.Range(0, 3) * 15 + 30;
+            Vector3 force = new Vector3(Mathf.RoundToInt(horizontal*.65f), Mathf.RoundToInt(vertical * .65f), 0);
+            gameObject.layer = LayerMask.NameToLayer("deadObj");
+            rb.AddForce(force, ForceMode.Impulse);
         }
         
     }

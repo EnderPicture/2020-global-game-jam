@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
                 for (int e = 0; e < enemyColliderInfo.Length; e++)
                 {
                     enemy Enemy = enemyColliderInfo[e].gameObject.GetComponent<enemy>();
-                    if (Enemy != null) { Enemy.damage(1,-(int)lastDirection.x); }
+                    if (Enemy != null) { Enemy.damage(1, -transform.localScale.x); }
                 }
                 attackTimer = attackCooldown;
             }
