@@ -8,17 +8,21 @@ public class carController : MonoBehaviour
     public float timeInvincible = 1f;
 
     public int currentHealth;
+    public int catchUp = 5;
+    public float catchUpRepairCooldown = .25f;
+    public float defRepairCooldown = 1;
     public int health { get { return currentHealth; } }
-
+    public int maxHealthReached;
     bool tryMakeInvincible;
     bool isInvincible;
     float invincibleTimer;
     public UICarHealth hp;
-
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = 10;
+        maxHealthReached = 10;
         tryMakeInvincible = false;
         isInvincible = false;
         hp.UpdateValues(currentHealth);
@@ -53,6 +57,9 @@ public class carController : MonoBehaviour
 
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        if (currentHealth > maxHealthReached) { maxHealthReached = currentHealth; }
+        if (currentHealth < maxHealthReached - catchUp) { player.repairCooldown = catchUpRepairCooldown; Debug.Log("gah"); }
+        else { player.repairCooldown = defRepairCooldown; }
         hp.UpdateValues(currentHealth);
     }
 }

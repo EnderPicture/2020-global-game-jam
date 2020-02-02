@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
         // Key Activate Attack
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))  //changed key cuz j is dumb
         {
-            Debug.Log("WE HIT BUTTON!");
             LaunchAttack(attackHitboxes[0]);
         }
     } // Update 
