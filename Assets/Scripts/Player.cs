@@ -119,13 +119,13 @@ public class Player : MonoBehaviour
 
     void LaunchAttack(Collider objCollider)
     {
-        attack.Play();
         // maybe make it so cooldown only animation
         if (attackTimer <= 0)
         {
             Collider[] enemyColliderInfo = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("Enemy"));
             if (enemyColliderInfo.Length != 0) 
             {
+                attack.Play();
                 for (int e = 0; e < enemyColliderInfo.Length; e++)
                 {
                     enemy Enemy = enemyColliderInfo[e].gameObject.GetComponent<enemy>();
@@ -138,6 +138,7 @@ public class Player : MonoBehaviour
                 Collider[] car = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("car"));
                 if (car.Length != 0)
                 {
+                    attack.Play();
                     Debug.Log ("UICarHealth?");
                     carController thecar = car[0].gameObject.GetComponent<carController>();
                     thecar.ChangeHealth(1);
