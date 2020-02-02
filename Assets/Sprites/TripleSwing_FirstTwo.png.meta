@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 0b7e8795bfdb6cf4db50f479586990ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1205810682714445693
+    second: TripleSwing_FirstTwo_0
+  - first:
+      213: 1315007448030360886
+    second: TripleSwing_FirstTwo_1
+  - first:
+      213: 8290398335718091367
+    second: TripleSwing_FirstTwo_2
+  - first:
+      213: -4230031402227079036
+    second: TripleSwing_FirstTwo_3
+  - first:
+      213: -8939297429697843963
+    second: TripleSwing_FirstTwo_4
+  - first:
+      213: -3868022331585450438
+    second: TripleSwing_FirstTwo_5
+  - first:
+      213: -2860738222659877248
+    second: TripleSwing_FirstTwo_6
+  - first:
+      213: -5768288789138335868
+    second: TripleSwing_FirstTwo_7
+  - first:
+      213: -6542386040453633198
+    second: TripleSwing_FirstTwo_8
+  - first:
+      213: -2488041592516392284
+    second: TripleSwing_FirstTwo_9
+  - first:
+      213: -6042151581055603273
+    second: TripleSwing_FirstTwo_10
+  - first:
+      213: -2697083751674619845
+    second: TripleSwing_FirstTwo_11
+  - first:
+      213: 6650737323145072687
+    second: TripleSwing_FirstTwo_12
+  - first:
+      213: -2443928774871238314
+    second: TripleSwing_FirstTwo_13
+  - first:
+      213: -9116122653986288694
+    second: TripleSwing_FirstTwo_14
+  - first:
+      213: 5976120449537633753
+    second: TripleSwing_FirstTwo_15
+  - first:
+      213: -1374713287804112521
+    second: TripleSwing_FirstTwo_16
+  - first:
+      213: 2147404344754826204
+    second: TripleSwing_FirstTwo_17
+  - first:
+      213: 84920253256334928
+    second: TripleSwing_FirstTwo_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2874
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3882f6e9299144fe0800000000000000
+      internalID: -1205810682714445693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_1
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 2874
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635b7d88e48df3210800000000000000
+      internalID: 1315007448030360886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_2
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 2874
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a67f6ac596d0370800000000000000
+      internalID: 8290398335718091367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_3
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 2874
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488e181f9d8eb45c0800000000000000
+      internalID: -4230031402227079036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_4
+      rect:
+        serializedVersion: 2
+        x: 5272
+        y: 2874
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d2c41a95c31f380800000000000000
+      internalID: -8939297429697843963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1916
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e229ede26025ac0800000000000000
+      internalID: -3868022331585450438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_6
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 1916
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086c9fa4ebd9c48d0800000000000000
+      internalID: -2860738222659877248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_7
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 1916
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4879a8178ebe2ffa0800000000000000
+      internalID: -5768288789138335868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_8
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 1916
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b694b2f86c435a0800000000000000
+      internalID: -6542386040453633198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_9
+      rect:
+        serializedVersion: 2
+        x: 5272
+        y: 1916
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aac9a39a53b87dd0800000000000000
+      internalID: -2488041592516392284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 958
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdad145627f52ca0800000000000000
+      internalID: -6042151581055603273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_11
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 958
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38d4fb1e98029ad0800000000000000
+      internalID: -2697083751674619845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_12
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 958
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f209e78bb5a2c4c50800000000000000
+      internalID: 6650737323145072687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_13
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 958
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659b17d4abb651ed0800000000000000
+      internalID: -2443928774871238314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_14
+      rect:
+        serializedVersion: 2
+        x: 5272
+        y: 958
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb8148deb60d7180800000000000000
+      internalID: -9116122653986288694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd63a1d2e17fe250800000000000000
+      internalID: 5976120449537633753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_16
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 0
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7713d6c5c890cece0800000000000000
+      internalID: -1374713287804112521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_17
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 0
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbed36cfdc1dcd10800000000000000
+      internalID: 2147404344754826204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_FirstTwo_18
+      rect:
+        serializedVersion: 2
+        x: 5272
+        y: 0
+        width: 1318
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e74993582bd2100800000000000000
+      internalID: 84920253256334928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: bedcceca5a0f8134e85382ba0de29210
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6672873944932653991
+    second: TripleSwing_lastswing_0
+  - first:
+      213: 7857865656388752247
+    second: TripleSwing_lastswing_1
+  - first:
+      213: 5309379689741063446
+    second: TripleSwing_lastswing_2
+  - first:
+      213: 1077353793161159512
+    second: TripleSwing_lastswing_3
+  - first:
+      213: 2411419017136817627
+    second: TripleSwing_lastswing_4
+  - first:
+      213: 1641055172239412622
+    second: TripleSwing_lastswing_5
+  - first:
+      213: -314649568795731931
+    second: TripleSwing_lastswing_6
+  - first:
+      213: 4931048334378482422
+    second: TripleSwing_lastswing_7
+  - first:
+      213: 5898407939116876503
+    second: TripleSwing_lastswing_8
+  - first:
+      213: 1526437676220510530
+    second: TripleSwing_lastswing_9
+  - first:
+      213: -1184059592750001175
+    second: TripleSwing_lastswing_10
+  - first:
+      213: 1906314247453331270
+    second: TripleSwing_lastswing_11
+  - first:
+      213: -3130053373711952860
+    second: TripleSwing_lastswing_12
+  - first:
+      213: -3870509568192040219
+    second: TripleSwing_lastswing_13
+  - first:
+      213: 8951606844749308058
+    second: TripleSwing_lastswing_14
+  - first:
+      213: 1408687215050271880
+    second: TripleSwing_lastswing_15
+  - first:
+      213: -6126301136569881779
+    second: TripleSwing_lastswing_16
+  - first:
+      213: -4280966195306270853
+    second: TripleSwing_lastswing_17
+  - first:
+      213: 922647470058708496
+    second: TripleSwing_lastswing_18
+  - first:
+      213: -9102878935959715345
+    second: TripleSwing_lastswing_19
+  - first:
+      213: -6215710086870918734
+    second: TripleSwing_lastswing_20
+  - first:
+      213: 2751169173131520422
+    second: TripleSwing_lastswing_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4388
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab9bae9f7fca9c50800000000000000
+      internalID: 6672873944932653991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_1
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 4388
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7731bc58e2fbc0d60800000000000000
+      internalID: 7857865656388752247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_2
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 4388
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61590b092b4bea940800000000000000
+      internalID: 5309379689741063446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_3
+      rect:
+        serializedVersion: 2
+        x: 7389
+        y: 4388
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8536aca119783fe00800000000000000
+      internalID: 1077353793161159512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_4
+      rect:
+        serializedVersion: 2
+        x: 9852
+        y: 4388
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5cf01e1d4177120800000000000000
+      internalID: 2411419017136817627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3291
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dc5260cf236c610800000000000000
+      internalID: 1641055172239412622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_6
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 3291
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528533f52e322abf0800000000000000
+      internalID: -314649568795731931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_7
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 3291
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa39e4955a9e6440800000000000000
+      internalID: 4931048334378482422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_8
+      rect:
+        serializedVersion: 2
+        x: 7389
+        y: 3291
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2c76ff4ca5bd150800000000000000
+      internalID: 5898407939116876503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_9
+      rect:
+        serializedVersion: 2
+        x: 9852
+        y: 3291
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24175e6aafefe2510800000000000000
+      internalID: 1526437676220510530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2194
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e31e35e210619fe0800000000000000
+      internalID: -1184059592750001175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_11
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 2194
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fc8bd35b6947a10800000000000000
+      internalID: 1906314247453331270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_12
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 2194
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424d2e35a01df84d0800000000000000
+      internalID: -3130053373711952860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_13
+      rect:
+        serializedVersion: 2
+        x: 7389
+        y: 2194
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2b928fd00394ac0800000000000000
+      internalID: -3870509568192040219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_14
+      rect:
+        serializedVersion: 2
+        x: 9852
+        y: 2194
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90ec366ffe7a3c70800000000000000
+      internalID: 8951606844749308058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1097
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ca4bcfe89ac8310800000000000000
+      internalID: 1408687215050271880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_16
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 1097
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b2ea723910bfaa0800000000000000
+      internalID: -6126301136569881779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_17
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 1097
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f60594de3f694c0800000000000000
+      internalID: -4280966195306270853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_18
+      rect:
+        serializedVersion: 2
+        x: 7389
+        y: 1097
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e13c15cf6edcc00800000000000000
+      internalID: 922647470058708496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_19
+      rect:
+        serializedVersion: 2
+        x: 9852
+        y: 1097
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe14cbc36d31ca180800000000000000
+      internalID: -9102878935959715345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b91f35bb9c5db9a0800000000000000
+      internalID: -6215710086870918734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TripleSwing_lastswing_21
+      rect:
+        serializedVersion: 2
+        x: 9852
+        y: 0
+        width: 2463
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9628169cd1e2620800000000000000
+      internalID: 2751169173131520422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e99698617bbbbfe4198956d646347731
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
