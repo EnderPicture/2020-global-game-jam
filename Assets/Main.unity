@@ -639,6 +639,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 145115717286419005, guid: bcb7efccd9f46cc49831a4df912d7579,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 160100623457918865, guid: bcb7efccd9f46cc49831a4df912d7579,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -663,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 983308099213867097, guid: bcb7efccd9f46cc49831a4df912d7579,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3332440661913897636, guid: bcb7efccd9f46cc49831a4df912d7579,
         type: 3}
@@ -733,6 +743,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589637061811357467, guid: bcb7efccd9f46cc49831a4df912d7579,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846566929790592876, guid: bcb7efccd9f46cc49831a4df912d7579,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6827050834239013028, guid: bcb7efccd9f46cc49831a4df912d7579,
         type: 3}
@@ -1197,9 +1217,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingLayerID: -1792261535
+  m_SortingLayer: -1
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: d2779f1f9027efa4fa4d83dacc9057ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
