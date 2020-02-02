@@ -39,6 +39,17 @@ public class SpawnEnemy : MonoBehaviour
                 Spawn2();
             if (randomspawn == 3)
                 Spawn3();
+
+            int clusterspawn = Random.Range(1, 10);
+            Debug.Log("rng cluster:" + clusterspawn);
+            if (clusterspawn == 10){
+            int cluster = 3;
+                for (int i = 0; i < cluster; i++)
+                    {
+                        Spawn0();
+                    }
+                clusterspawn = 0;
+            }
             timer = 0;
         }
     } // update

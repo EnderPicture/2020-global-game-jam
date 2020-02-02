@@ -134,11 +134,18 @@ public class enemy : MonoBehaviour
             Destroy(gameObject, deathTime);
             animator.Play("GatorDeath");
             int mod = direction > 0 ? 1 : -1;
-            int horizontal =(Random.Range(0,3) * 20 + 20) * mod;
+            int horizontal = (Random.Range(0,3) * 20 + 20) * mod;
             int vertical = Random.Range(0, 3) * 15 + 30;
             Vector3 force = new Vector3(Mathf.RoundToInt(horizontal*.65f), Mathf.RoundToInt(vertical * .65f), 0);
             gameObject.layer = LayerMask.NameToLayer("deadObj");
             sprite.DOFade(0, deathTime);
+            rb.AddForce(force, ForceMode.Impulse);
+        } else
+        {
+            int mod = direction > 0 ? 1 : -1;
+            int horizontal = (Random.Range(0, 1) * 5 + 20) * mod;
+            int vertical = Random.Range(0, 1) * 5 + 30;
+            Vector3 force = new Vector3(Mathf.RoundToInt(horizontal * .45f), Mathf.RoundToInt(vertical * .5f), 0);
             rb.AddForce(force, ForceMode.Impulse);
         }
         
