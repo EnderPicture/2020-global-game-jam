@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
                 foreach (Collider e in ene)
                 {
                     Debug.Log(e.name);
-                    // enemy do stuff
+                    (e.gameObject.GetComponent<enemy>()).damage(1);
                 }
                 attackTimer = attackCooldown;
             }
@@ -135,6 +135,6 @@ public class Player : MonoBehaviour
                     attackTimer = attackCooldown;
                 }
             }
-        }      
+        }
     }
 }
