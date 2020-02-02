@@ -25,7 +25,7 @@ public class enemy : MonoBehaviour
     public float vertical = 0;
     public float horizontal = 1;
 
-    public float deathTime = 1;
+    public float deathTime = 1/4;
 
     public OneWayGroundCheck oneWayGroundCheck;
 
@@ -33,8 +33,11 @@ public class enemy : MonoBehaviour
     public GroundCheck groundCheck;
 
     float lastJump;
+    bool isDead = false;
 
     public UICarHealth theuicarhealth;
+
+    public Animator animator;
 
     void Start()
     {
@@ -50,95 +53,94 @@ public class enemy : MonoBehaviour
 
     void movement()
     {
-        // go to car 
-        float distanceToCar = car.position.x - transform.position.x;
-        if (distanceToCar > 0)
-            horizontal = 1; // right 
-        else
-            horizontal = -1; // left
+        if(!isDead){ 
+            // go to car 
+            float distanceToCar = car.position.x - transform.position.x;
+            if (distanceToCar > 0)
+                horizontal = 1; // right 
+            else
+                horizontal = -1; // left
 
-        Vector2 direction = new Vector2(0, 0);
-        Vector3 velocity = rb.velocity;
+            Vector2 direction = new Vector2(0, 0);
+            Vector3 velocity = rb.velocity;
 
-        if (horizontal > 0)
-        {
-            direction.x = 1;
-        }
-        else if (horizontal < 0)
-        {
-            direction.x = -1;
-        }
-        if (vertical > 0)
-        {
-            direction.y = 1;
-        }
-        else if (vertical < 0)
-        {
-            direction.y = -1;
-        }
-
-
-        if (direction.x != lastDirection.x && direction.x != 0)
-        {
-            velocity.x = boostX * direction.x;
-        }
-        else if (direction.x != 0)
-        {
-            rb.AddForce(accX * direction.x * Mathf.Clamp(maxSpeedX - (velocity.x * direction.x), 0, maxSpeedX), 0, 0);
-        }
-        else
-        {
-            rb.AddForce(-velocity.x * dampX, 0, 0);
-        }
-
-
-        if (direction.y != lastDirection.y && direction.y != 0)
-        {
-            if (direction.y > 0 && groundCheck.isOnGround())
+            if (horizontal > 0)
             {
-                rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
-                lastJump = Time.realtimeSinceStartup;
+                direction.x = 1;
             }
-            if (direction.y < 0 && groundCheck.isOnGround())
+            else if (horizontal < 0)
             {
-                oneWayGroundCheck.goDown();
+                direction.x = -1;
             }
-        }
-        else if (direction.y != 0)
-        {
-            if (direction.y > 0)
+            if (vertical > 0)
             {
-                float timeUsage = Helper.Map(Time.realtimeSinceStartup - lastJump, 0, accJumpDuration, 1, 0);
-                timeUsage = Mathf.Clamp(timeUsage, 0, 1);
-                rb.AddForce(0, accJump * timeUsage, 0);
+                direction.y = 1;
             }
-        }
+            else if (vertical < 0)
+            {
+                direction.y = -1;
+            }
 
+
+            if (direction.x != lastDirection.x && direction.x != 0)
+            {
+                velocity.x = boostX * direction.x;
+            }
+            else if (direction.x != 0)
+            {
+                rb.AddForce(accX * direction.x * Mathf.Clamp(maxSpeedX - (velocity.x * direction.x), 0, maxSpeedX), 0, 0);
+            }
+            else
+            {
+                rb.AddForce(-velocity.x * dampX, 0, 0);
+            }
+
+
+            if (direction.y != lastDirection.y && direction.y != 0)
+            {
+                if (direction.y > 0 && groundCheck.isOnGround())
+                {
+                    rb.AddForce(0, boostJump, 0, ForceMode.Impulse);
+                    lastJump = Time.realtimeSinceStartup;
+                }
+                if (direction.y < 0 && groundCheck.isOnGround())
+                {
+                    oneWayGroundCheck.goDown();
+                }
+            }
+            else if (direction.y != 0)
+            {
+                if (direction.y > 0)
+                {
+                    float timeUsage = Helper.Map(Time.realtimeSinceStartup - lastJump, 0, accJumpDuration, 1, 0);
+                    timeUsage = Mathf.Clamp(timeUsage, 0, 1);
+                    rb.AddForce(0, accJump * timeUsage, 0);
+                }
+            }
         rb.velocity = velocity;
         lastDirection = direction;
+        }
     }
 
-    public void damage(int damage)
+    public void damage(int damage, int direction)
     {
         health -= damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
-            //add velocity feels good send
+            isDead = true;
+            Destroy(gameObject, deathTime);
+            animator.Play("GatorDeath");
+            int horizontal = Random.Range(0,7) * 100 + 700 * direction;
+            int vertical = Random.Range(0, 5) * 100 + 900;
+            Vector3 force = new Vector3(horizontal, vertical, 0);
+            rb.AddForce(force);
         }
         
     }
 
-    void death()
-    {
-        //this.SetActive(false)
-
-        //Destroy(gameObject, deathTime);
-    }
-
     private void OnCollisionStay(Collision other)
     {
-        if (other.gameObject.tag == "car")
+        if (!isDead && other.gameObject.tag == "car")
         {
             other.gameObject.GetComponent<carController>().ChangeHealth(attack);
         }
