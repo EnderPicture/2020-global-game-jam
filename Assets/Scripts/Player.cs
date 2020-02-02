@@ -18,7 +18,9 @@ public class Player : MonoBehaviour
     public float maxSpeedY;
 
     public float attackCooldown;
-    public float attackTimer;
+    public float repairCooldown;
+    float attackTimer;
+    float repairTimer;
 
     public OneWayGroundCheck oneWayGroundCheck;
 
@@ -39,6 +41,8 @@ public class Player : MonoBehaviour
         // Attack Timing
         if (attackTimer > 0)
             attackTimer -= Time.deltaTime;
+        if (repairTimer > 0)
+            repairTimer -= Time.deltaTime;
         // Key Activate Attack
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))  //changed key cuz j is dumb
         {
@@ -122,7 +126,7 @@ public class Player : MonoBehaviour
                 }
                 attackTimer = attackCooldown;
             }
-            else
+            else if(repairTimer <= 0)
             {
                 Collider[] car = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("car"));
                 if (car.Length != 0)
@@ -131,7 +135,7 @@ public class Player : MonoBehaviour
                     carController thecar = car[0].gameObject.GetComponent<carController>();
                     thecar.ChangeHealth(1);
                     Debug.Log (thecar.currentHealth);
-                    attackTimer = attackCooldown;
+                    repairTimer = repairCooldown;
                 }
             }
         }
