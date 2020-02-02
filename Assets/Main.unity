@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1891086318}
-  offset: {x: 0, y: 4.1, z: -8.95}
+  offset: {x: 0, y: 4.1, z: -20}
   smoothness: 0.1
 --- !u!1 &1665579988
 GameObject:
