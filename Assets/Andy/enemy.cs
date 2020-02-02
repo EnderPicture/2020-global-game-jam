@@ -77,7 +77,7 @@ public class enemy : MonoBehaviour
         }
         else if (direction.x != 0)
         {
-            rb.AddForce(accX * direction.x * (maxSpeedX - Mathf.Abs(velocity.x)), 0, 0);
+            rb.AddForce(accX * direction.x * Mathf.Clamp(maxSpeedX - (velocity.x * direction.x), 0, maxSpeedX), 0, 0);
         }
         else
         {
