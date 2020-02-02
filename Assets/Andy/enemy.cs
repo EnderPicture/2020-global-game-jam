@@ -42,10 +42,6 @@ public class enemy : MonoBehaviour
     void FixedUpdate()
     {
         movement();
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            LaunchAttack(attackHitboxes[0]);
-        }
     }
 
     void movement()
@@ -116,26 +112,20 @@ public class enemy : MonoBehaviour
 
     public void damage(int damage)
     {
+        Debug.Log("a");
         health -= damage;
         if (health <= 0)
         {
-            death();
+            Destroy(gameObject);
             //add velocity feels good send
         }
+        
     }
 
     void death()
     {
-        Destroy(gameObject, deathTime);
-    }
+        //this.SetActive(false)
 
-    void LaunchAttack(Collider col)
-    {
-        Collider[] cols = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
-        foreach (Collider c in cols)
-        {
-            Debug.Log(c.name);
-        }
-
+        //Destroy(gameObject, deathTime);
     }
 }

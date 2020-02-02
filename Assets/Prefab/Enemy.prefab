@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1220174292}
   - component: {fileID: 1220174293}
   - component: {fileID: 1220174294}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 2102698597}
   - component: {fileID: 2102698599}
   - component: {fileID: 2102698598}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: OneWayGroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 7507959557263362514}
   - component: {fileID: 1995530225}
   - component: {fileID: 1995530224}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3761145454868878818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 3576193551710793853}
   - component: {fileID: 6730214016470470732}
   - component: {fileID: 3532610828145635648}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 6295647263258103050}
   - component: {fileID: 1929705298283058072}
   - component: {fileID: 2446817270311985667}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,6 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0642c275bb24be04da8748ae45ba90e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
+  noise: 0.1
   boostX: 6
   accX: 10
   maxSpeedX: 8
@@ -367,6 +369,7 @@ MonoBehaviour:
   accJumpDuration: 0.4
   vertical: 0
   horizontal: 1
+  deathTime: 1
   oneWayGroundCheck: {fileID: 2102698599}
   attackHitboxes: []
   groundCheck: {fileID: 1995530224}

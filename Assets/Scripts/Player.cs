@@ -119,10 +119,12 @@ public class Player : MonoBehaviour
             Collider[] ene = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
             if (ene.Length != 0)
             {
-                foreach (Collider e in ene)
+                
+                for(int e = 0; e < ene.Length; e++)
                 {
-                    Debug.Log(e.name);
-                    (e.gameObject.GetComponent<enemy>()).damage(1);
+
+                    enemy Enemy = ene[e].gameObject.GetComponent<enemy>();
+                    if (Enemy != null) { Enemy.damage(1); }
                 }
                 attackTimer = attackCooldown;
             }
