@@ -1386,6 +1386,11 @@ PrefabInstance:
       propertyPath: maxSpeedY
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7396635878411591743, guid: 44bc4eb337f68b543b37567822f73b06,
+        type: 3}
+      propertyPath: attackCooldown
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7441804910729915853, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
       propertyPath: m_LocalPosition.x
