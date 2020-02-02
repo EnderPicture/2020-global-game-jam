@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     public OneWayGroundCheck oneWayGroundCheck;
 
-
+    public Collider[] attackHitboxes;
     public GroundCheck groundCheck;
 
     float lastJump;
@@ -29,6 +29,14 @@ public class Player : MonoBehaviour
         lastJump = Time.realtimeSinceStartup;
     }
     void FixedUpdate()
+    {
+        movement();
+        if(Input.GetKeyDown(KeyCode.J)) {
+            LaunchAttack(attackHitboxes[0]);
+        }
+    }
+
+    void movement() 
     {
         float vertical = Input.GetAxisRaw("Vertical");
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -94,5 +102,13 @@ public class Player : MonoBehaviour
 
         rb.velocity = velocity;
         lastDirection = direction;
+    }
+
+    void LaunchAttack(Collider col) {
+        Collider[] cols = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Enemy"));
+        foreach(Collider c in cols) {
+            Debug.Log(c.name);
+        }
+        
     }
 }
