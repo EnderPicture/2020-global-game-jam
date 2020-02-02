@@ -20,6 +20,10 @@ public class carController : MonoBehaviour
     public Player player;
     public Sprite[] carSprites;
     public SpriteRenderer spriteRenderer;
+
+    public AudioSource carHit;
+    public AudioSource carRepair;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +56,6 @@ public class carController : MonoBehaviour
         else if (currentHealth >= 10){
                 spriteRenderer.sprite = carSprites[9];}                                 
         
-
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
@@ -61,6 +64,7 @@ public class carController : MonoBehaviour
         }
         if(tryMakeInvincible && ! isInvincible)
         {
+            carHit.Play();
             isInvincible = true;
             invincibleTimer = timeInvincible;
         }
@@ -71,16 +75,21 @@ public class carController : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         if (amount < 0)
-        {
+        {   
             if (isInvincible)
                 return;
             tryMakeInvincible = true;
+        } else
+        {
+            carRepair.Play();
         }
-
-
+        
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         if (currentHealth > maxHealthReached) { maxHealthReached = currentHealth; }
-        if (currentHealth < maxHealthReached - catchUp) { player.repairCooldown = catchUpRepairCooldown; Debug.Log("gah"); }
+        if (currentHealth < maxHealthReached - catchUp) { 
+            player.repairCooldown = catchUpRepairCooldown; 
+            Debug.Log("gah");
+        }
         else { player.repairCooldown = defRepairCooldown; }
         hp.UpdateValues(currentHealth);
     }

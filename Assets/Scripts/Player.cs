@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     float attackTimer;
     float repairTimer;
 
+    float lastAttacked;
+
     public OneWayGroundCheck oneWayGroundCheck;
 
     public Collider[] attackHitboxes;
@@ -32,12 +34,15 @@ public class Player : MonoBehaviour
     public AudioSource walk;
     public AudioSource attack;
 
+    public int attackState = 1;
+
     float lastJump;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         lastJump = Time.realtimeSinceStartup;
+        lastAttacked = Time.realtimeSinceStartup;
     }
     void Update()
     {
@@ -63,12 +68,12 @@ public class Player : MonoBehaviour
 
     // Key Activate Move Player
         if (horizontal > 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
             direction.x = 1;
             if( !walk.isPlaying )
                 walk.Play();
         } else if (horizontal < 0) {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
             direction.x = -1;
             if (!walk.isPlaying)
                 walk.Play();
@@ -119,25 +124,88 @@ public class Player : MonoBehaviour
 
     void LaunchAttack(Collider objCollider)
     {
+        float bufferTime = .3f;
+        float timeSinceAttack = Time.realtimeSinceStartup - lastAttacked;
+        Debug.Log(timeSinceAttack);
+        if (attackState == 1)
+        {
+            float animationTime = .06f / .11f;
+            if (timeSinceAttack < animationTime - bufferTime)
+            {
+                return;
+            }
+            else if (timeSinceAttack > animationTime + bufferTime)
+            {
+                attackState = 1;
+            }
+        }
+        if (attackState == 2)
+        {
+            float animationTime = .06f / .07f;
+            if (timeSinceAttack < animationTime - bufferTime)
+            {
+                return;
+            }
+            else if (timeSinceAttack > animationTime + bufferTime)
+            {
+                attackState = 1;
+            }
+        }
+        if (attackState == 3)
+        {
+            float animationTime = .06f / .22f;
+            if (timeSinceAttack < animationTime - bufferTime)
+            {
+                return;
+            }
+            else if (timeSinceAttack > animationTime + bufferTime)
+            {
+                attackState = 1;
+            }
+        }
+        objCollider = attackHitboxes[0];
         attack.Play();
+        animator.Play("PlayerAttack"+ attackState);
+        attackState += 1;
+        lastAttacked = Time.realtimeSinceStartup;
+
+        if (attackState > 3)
+        {
+            attackState = 1;
+        }
+
+        if (attackState == 3)
+        {
+            objCollider = attackHitboxes[1];
+        }
+
+
         // maybe make it so cooldown only animation
         if (attackTimer <= 0)
         {
             Collider[] enemyColliderInfo = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("Enemy"));
-            if (enemyColliderInfo.Length != 0) 
+            Collider[] flyingColliderInfo = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("FlyingObject"));
+            if (enemyColliderInfo.Length != 0 || flyingColliderInfo.Length != 0) 
             {
+                attack.Play();
                 for (int e = 0; e < enemyColliderInfo.Length; e++)
                 {
                     enemy Enemy = enemyColliderInfo[e].gameObject.GetComponent<enemy>();
                     if (Enemy != null) { Enemy.damage(1, -transform.localScale.x); }
                 }
+                for (int e = 0; e < flyingColliderInfo.Length; e++)
+                {
+                    enemy Enemy = flyingColliderInfo[e].gameObject.GetComponent<enemy>();
+                    if (Enemy != null) { Enemy.damage(1, -transform.localScale.x); }
+                }
                 attackTimer = attackCooldown;
-            }
+            } 
             else if(repairTimer <= 0)
             {
                 Collider[] car = Physics.OverlapBox(objCollider.bounds.center, objCollider.bounds.extents, objCollider.transform.rotation, LayerMask.GetMask("car"));
                 if (car.Length != 0)
                 {
+                    attack.Play();
                     Debug.Log ("UICarHealth?");
                     carController thecar = car[0].gameObject.GetComponent<carController>();
                     thecar.ChangeHealth(1);
