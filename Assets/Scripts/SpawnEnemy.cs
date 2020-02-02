@@ -6,10 +6,15 @@ public class SpawnEnemy : MonoBehaviour
 {
     float timer = 0;
 
+    public Spawner spawner1;
+    public Spawner spawner2;
+    public Spawner spawner3;
+    public Spawner spawner4;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -48,20 +53,20 @@ public class SpawnEnemy : MonoBehaviour
     }
     void Spawn0()
     {
-        //float extraspawn;
-        //extraspawn = Random.range(0,3);
-        //GameObject = Instantiate(Enemy, transform.position, transform.rotation);
+        // spawner1.mode = 0;
+        // spawner1.amount = 1;
+        spawner1.spawn();
     }
     void Spawn1()
     {
-        //GameObject = Instantiate(Enemy, transform.position, transform.rotation);
+        spawner2.spawn();
     }
     void Spawn2()
     {
-        //GameObject = Instantiate(Enemy, transform.position, transform.rotation);
+        spawner3.spawn();
     }
     void Spawn3()
     {
-        // GameObject = Instantiate(Enemy, transform.position, transform.rotation);
+        spawner4.spawn();
     }
 }

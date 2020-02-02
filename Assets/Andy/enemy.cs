@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
 
-    public float heath = 1;
+    public float health = 1;
     public float noise = .1f;
 
     Rigidbody rb;
@@ -22,6 +22,8 @@ public class enemy : MonoBehaviour
 
     public float vertical = 0;
     public float horizontal = 1;
+
+    public float deathTime = 1;
 
     public OneWayGroundCheck oneWayGroundCheck;
 
@@ -51,7 +53,6 @@ public class enemy : MonoBehaviour
     void movement()
     {
 
-
         Vector2 direction = new Vector2(0, 0);
         Vector3 velocity = rb.velocity;
 
@@ -79,7 +80,7 @@ public class enemy : MonoBehaviour
         }
         else if (direction.x != 0)
         {
-            rb.AddForce(accX * direction.x * (maxSpeedX - Mathf.Abs(velocity.x)), 0, 0);
+            rb.AddForce(accX * direction.x * Mathf.Clamp(maxSpeedX - (velocity.x * direction.x), 0, maxSpeedX), 0, 0);
         }
         else
         {
@@ -111,9 +112,23 @@ public class enemy : MonoBehaviour
 
 
 
-
         rb.velocity = velocity;
         lastDirection = direction;
+    }
+
+    public void damage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            death();
+            //add velocity feels good send
+        }
+    }
+
+    void death()
+    {
+        Destroy(gameObject, deathTime);
     }
 
     void LaunchAttack(Collider col)
