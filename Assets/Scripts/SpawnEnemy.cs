@@ -32,30 +32,16 @@ public class SpawnEnemy : MonoBehaviour
             randomspawn = Random.Range(0, 3);
 
             if (randomspawn == 0)
-            {
                 Spawn0();
-            }
             if (randomspawn == 1)
-            {
                 Spawn1();
-            }
             if (randomspawn == 2)
-            {
                 Spawn2();
-            }
             if (randomspawn == 3)
-            {
                 Spawn3();
-            }
-
-
             timer = 0;
         }
-
-
-
-
-    }
+    } // update
 
     public void spawnXPatternObject(bool s1, bool s2, bool s3, bool s4, GameObject go) {
         if (s1)

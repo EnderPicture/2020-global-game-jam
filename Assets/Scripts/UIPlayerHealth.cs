@@ -3,19 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+// Not being used rn
 public class UIPlayerHealth : MonoBehaviour
 {
     public static UIPlayerHealth instance { get; private set; }
-
-    /*
-    In Player and Car  
-    public UIHealth hp;
-    if (amount == 1)
-        hp.SetValue(currentHealth-1, true);
-    else
-        hp.SetValue(currentHealth, false);
-    */
 
     public Image HP1;
     public Image HP2;

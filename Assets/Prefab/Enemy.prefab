@@ -362,6 +362,7 @@ MonoBehaviour:
   health: 1
   noise: 0.1
   car: {fileID: 0}
+  attack: -3
   boostX: 6
   accX: 10
   maxSpeedX: 8

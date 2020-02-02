@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-
     public float health = 1;
     public float noise = .1f;
 
-    public Transform car;
+    public Transform car; // Why?
 
     Rigidbody rb;
     Vector2 lastDirection;
@@ -41,7 +40,6 @@ public class enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         lastJump = Time.realtimeSinceStartup;
-
         maxSpeedX += Random.Range(-noise, noise);
     }
 
@@ -52,12 +50,12 @@ public class enemy : MonoBehaviour
 
     void movement()
     {
-        float disToCar = car.position.x - transform.position.x;
-        if (disToCar > 0) {
-            horizontal = 1;
-        } else {
-            horizontal = -1;
-        }
+        // go to car 
+        float distanceToCar = car.position.x - transform.position.x;
+        if (distanceToCar > 0)
+            horizontal = 1; // right 
+        else
+            horizontal = -1; // left
 
         Vector2 direction = new Vector2(0, 0);
         Vector3 velocity = rb.velocity;
@@ -115,8 +113,6 @@ public class enemy : MonoBehaviour
                 rb.AddForce(0, accJump * timeUsage, 0);
             }
         }
-
-
 
         rb.velocity = velocity;
         lastDirection = direction;

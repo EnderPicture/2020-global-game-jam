@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class UICarHealth : MonoBehaviour
 {
     public static UICarHealth instance { get; private set; }
-
+    public List<Image> aGrid = new List<Image>();
     public Image HP1;
     public Image HP2;
     public Image HP3;
@@ -18,14 +17,7 @@ public class UICarHealth : MonoBehaviour
     public Image HP8;
     public Image HP9;
     public Image HP10;
-
-    public List<Image> aGrid = new List<Image>();
-
-    void Awake()
-    {
-        instance = this;
-    }
-
+    public Text display;
     void Start()
     {
         aGrid.Add(HP1);
@@ -40,8 +32,10 @@ public class UICarHealth : MonoBehaviour
         aGrid.Add(HP10);
     }
 
-    public void SetValue(int health, bool hasHealth)
+    public void UpdateValues(int health)
     {
-        // aGrid[health].enabled = hasHealth;
+        display.text = ""+health;
+        for(int n = 0; n < 10; n++) 
+         aGrid[n].enabled = (health/10 > n);
     }
 }
