@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
+
+    public float heath = 1;
+    public float noise = .1f;
+
     Rigidbody rb;
     Vector2 lastDirection;
 
@@ -30,6 +34,8 @@ public class enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         lastJump = Time.realtimeSinceStartup;
+
+        maxSpeedX += Random.Range(-noise, noise);
     }
     void FixedUpdate()
     {

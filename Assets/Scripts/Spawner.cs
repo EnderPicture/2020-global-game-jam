@@ -5,17 +5,21 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform TL;
-    public Transform BR;
+    public Transform tl;
+    public Transform br;
 
-    void Start()
-    {
-        
-    }
+    public static int RAND = 0;
+    public int mode = RAND;
+    public int amount = 10;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public GameObject[] enemies;
+
+    public void spawn() {
+        if (mode == RAND) {
+            for (int c = 0; c < amount; c++) {
+                int rand = Random.Range(0, enemies.Length);
+                GameObject newEnemy = GameObject.Instantiate(enemies[rand]);
+            }
+        }
     }
 }
