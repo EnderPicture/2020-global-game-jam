@@ -37,6 +37,8 @@ public class enemy : MonoBehaviour
 
     public UICarHealth theuicarhealth;
 
+    public Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -127,6 +129,7 @@ public class enemy : MonoBehaviour
         {
             isDead = true;
             Destroy(gameObject, deathTime);
+            animator.Play("GatorDeath");
             int horizontal = Random.Range(0,7) * 100 + 700 * direction;
             int vertical = Random.Range(0, 5) * 100 + 900;
             Vector3 force = new Vector3(horizontal, vertical, 0);
