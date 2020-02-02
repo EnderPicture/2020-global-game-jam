@@ -14,11 +14,18 @@ public class Spawner : MonoBehaviour
 
     public GameObject[] enemies;
 
-    public void spawn() {
-        if (mode == RAND) {
-            for (int c = 0; c < amount; c++) {
+    public GameObject container;
+
+    public void spawn()
+    {
+        if (mode == RAND)
+        {
+            for (int c = 0; c < amount; c++)
+            {
                 int rand = Random.Range(0, enemies.Length);
                 GameObject newEnemy = GameObject.Instantiate(enemies[rand]);
+                newEnemy.transform.position = new Vector3(Random.Range(tl.position.x, br.position.x), Random.Range(br.position.y, tl.position.y), 0);
+                newEnemy.transform.parent = container.transform;
             }
         }
     }
