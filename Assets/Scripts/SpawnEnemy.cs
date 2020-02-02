@@ -56,6 +56,17 @@ public class SpawnEnemy : MonoBehaviour
 
 
     }
+
+    public void spawnXPatternObject(bool s1, bool s2, bool s3, bool s4, GameObject go) {
+        if (s1)
+        spawner1.spawnGameObject(go);
+        if (s2)
+        spawner2.spawnGameObject(go);
+        if (s3)
+        spawner3.spawnGameObject(go);
+        if (s4)
+        spawner4.spawnGameObject(go);
+    }
     void Spawn0()
     {
         // spawner1.mode = 0;

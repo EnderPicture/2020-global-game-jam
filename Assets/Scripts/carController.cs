@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class carController : MonoBehaviour
 {
-    public int maxHealth = 10;
-    public float timeInvincible = 2.0f;
+    public int maxHealth = 100; //100 not 10
+    public float timeInvincible = 1.0f;
 
-    int currentHealth;
+    public int currentHealth;
     public int health { get { return currentHealth; } }
 
     bool isInvincible;

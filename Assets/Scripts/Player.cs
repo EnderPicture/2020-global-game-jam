@@ -44,7 +44,11 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Return))  //changed key cuz j is dumb
+        {
+            LaunchAttack(attackHitboxes[0]);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))  //space to attack also
         {
             LaunchAttack(attackHitboxes[0]);
         }
@@ -138,10 +142,13 @@ public class Player : MonoBehaviour
             }
             else
             {
-                Collider[] car = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Car"));
+                Collider[] car = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("car"));
                 if (car.Length != 0)
                 {
-                    //car[0] do stuff
+                    Debug.Log ("UICarHealth?");
+                    carController c = car[0].gameObject.GetComponent<carController>();
+                    c.currentHealth += 1;
+                    Debug.Log (c.currentHealth);
                     attackTimer = attackCooldown;
 
                 }
