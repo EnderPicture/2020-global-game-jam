@@ -8,15 +8,6 @@ public class UICarHealth : MonoBehaviour
 {
     public static UICarHealth instance { get; private set; }
 
-    /*
-    In Player and Car  
-    public UIHealth hp;
-    if (amount == 1)
-        hp.SetValue(currentHealth-1, true);
-    else
-        hp.SetValue(currentHealth, false);
-    */
-
     public Image HP1;
     public Image HP2;
     public Image HP3;
@@ -51,7 +42,7 @@ public class UICarHealth : MonoBehaviour
 
     public void SetValue(int health, bool hasHealth)
     {
-        aGrid[health].enabled = hasHealth;
         Debug.Log("UIBARCALLED HP Lost");
+        aGrid[health].enabled = hasHealth;
     }
 }

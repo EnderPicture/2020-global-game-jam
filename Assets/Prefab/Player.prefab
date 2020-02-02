@@ -491,10 +491,14 @@ MonoBehaviour:
   boostJump: 14
   accJump: 140
   accJumpDuration: 0.4
+  attackCooldown: 0
+  attackTimer: 0
   oneWayGroundCheck: {fileID: 2102698599}
   attackHitboxes:
   - {fileID: 0}
   groundCheck: {fileID: 1995530224}
+  spriteR: {fileID: 6730214016470470732}
+  animator: {fileID: 3532610828145635648}
 --- !u!136 &1929705298283058072
 CapsuleCollider:
   m_ObjectHideFlags: 0
