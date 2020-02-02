@@ -8,6 +8,8 @@ public class enemy : MonoBehaviour
     public float health = 1;
     public float noise = .1f;
 
+    public int type = 0;
+
     public Transform car; // Why?
 
     Rigidbody rb;
@@ -28,7 +30,7 @@ public class enemy : MonoBehaviour
     public float vertical = 0;
     public float horizontal = 1;
 
-    public float deathTime = 1/4;
+    public float deathTime = 1 / 4;
 
     public OneWayGroundCheck oneWayGroundCheck;
 
@@ -51,12 +53,25 @@ public class enemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (type == 0)
+        {
+            animator.Play("GatorRun");
+        }
+        else if (type == 1)
+        {
+            animator.Play("HatGatorRun");
+        }
+        else if (type == 2)
+        {
+            animator.Play("RedGatorRun");
+        }
         movement();
     }
 
     void movement()
     {
-        if(!isDead){ 
+        if (!isDead)
+        {
             // go to car 
             float distanceToCar = car.position.x - transform.position.x;
             if (distanceToCar > 0)
@@ -64,7 +79,7 @@ public class enemy : MonoBehaviour
                 horizontal = 1; // right 
                 transform.localScale = new Vector3(1, 1, 1);
             }
-                
+
             else
             {
                 horizontal = -1; // left
@@ -126,8 +141,8 @@ public class enemy : MonoBehaviour
                     rb.AddForce(0, accJump * timeUsage, 0);
                 }
             }
-        rb.velocity = velocity;
-        lastDirection = direction;
+            rb.velocity = velocity;
+            lastDirection = direction;
         }
     }
 
@@ -138,15 +153,27 @@ public class enemy : MonoBehaviour
         {
             isDead = true;
             Destroy(gameObject, deathTime);
-            animator.Play("GatorDeath");
+            if (type == 0)
+            {
+                animator.Play("GatorDeath");
+            }
+            else if (type == 1)
+            {
+                animator.Play("GatorDeath");
+            }
+            else if (type == 2)
+            {
+                animator.Play("GatorDeath");
+            }
             int mod = direction > 0 ? 1 : -1;
-            int horizontal = (Random.Range(0,3) * 20 + 20) * mod;
+            int horizontal = (Random.Range(0, 3) * 20 + 20) * mod;
             int vertical = Random.Range(0, 3) * 15 + 30;
-            Vector3 force = new Vector3(Mathf.RoundToInt(horizontal*.65f), Mathf.RoundToInt(vertical * .65f), 0);
+            Vector3 force = new Vector3(Mathf.RoundToInt(horizontal * .65f), Mathf.RoundToInt(vertical * .65f), 0);
             gameObject.layer = LayerMask.NameToLayer("deadObj");
             sprite.DOFade(0, deathTime);
             rb.AddForce(force, ForceMode.Impulse);
-        } else
+        }
+        else
         {
             int mod = direction > 0 ? 1 : -1;
             int horizontal = (Random.Range(0, 1) * 5 + 20) * mod;
@@ -154,7 +181,7 @@ public class enemy : MonoBehaviour
             Vector3 force = new Vector3(Mathf.RoundToInt(horizontal * .45f), Mathf.RoundToInt(vertical * .5f), 0);
             rb.AddForce(force, ForceMode.Impulse);
         }
-        
+
     }
 
     private void OnCollisionStay(Collision other)
