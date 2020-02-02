@@ -361,6 +361,7 @@ MonoBehaviour:
   health: 1
   noise: 0.1
   car: {fileID: 0}
+  sprite: {fileID: 6730214016470470732}
   attack: -2
   boostX: 6
   accX: 10

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class enemy : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class enemy : MonoBehaviour
 
     Rigidbody rb;
     Vector2 lastDirection;
+
+    public SpriteRenderer sprite;
 
     public int attack = -3;
     public float boostX;
@@ -135,6 +138,7 @@ public class enemy : MonoBehaviour
             int vertical = Random.Range(0, 3) * 15 + 30;
             Vector3 force = new Vector3(Mathf.RoundToInt(horizontal*.65f), Mathf.RoundToInt(vertical * .65f), 0);
             gameObject.layer = LayerMask.NameToLayer("deadObj");
+            sprite.DOFade(0, deathTime);
             rb.AddForce(force, ForceMode.Impulse);
         }
         

@@ -39,14 +39,16 @@ public class Player : MonoBehaviour
         // Attack Timing
         if (attackTimer > 0)
             attackTimer -= Time.deltaTime;
+        // Key Activate Attack
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))  //changed key cuz j is dumb
+        {
+            Debug.Log("WE HIT BUTTON!");
+            LaunchAttack(attackHitboxes[0]);
+        }
     } // Update 
     void FixedUpdate()
     {
-    // Key Activate Attack
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) )  //changed key cuz j is dumb
-        {
-            LaunchAttack(attackHitboxes[0]);
-        }
+    
 
     // Movement 
         float vertical = Input.GetAxisRaw("Vertical");

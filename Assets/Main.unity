@@ -1243,6 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Car: {fileID: 1665579992}
+  Enemy: {fileID: 768472733846207162, guid: 0a63bf3070825e643a24ef594b93e3ec, type: 3}
   RedEnemy: {fileID: 768472733846207162, guid: 2d80d7be52dac8f418fadcbf90c206da, type: 3}
   spawnEnemy: {fileID: 1057108884}
 --- !u!4 &1891086318 stripped
@@ -1459,12 +1460,17 @@ PrefabInstance:
     - target: {fileID: 8560999031376472451, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8560999031376472451, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
       propertyPath: m_Size.y
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560999031376472451, guid: 44bc4eb337f68b543b37567822f73b06,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9172217505950842822, guid: 44bc4eb337f68b543b37567822f73b06,
         type: 3}
