@@ -96,27 +96,27 @@ PrefabInstance:
     - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: maxSpeedX
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: health
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: attack
-      value: -4
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: accX
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6295647263258103050, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7441804910729915853, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 9172217505950842822, guid: 80cc78d2b8c90f34fbf5f10fef9675b0,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Variant 3
+      value: Enemy Variant 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80cc78d2b8c90f34fbf5f10fef9675b0, type: 3}

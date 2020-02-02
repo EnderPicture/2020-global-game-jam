@@ -1245,6 +1245,8 @@ MonoBehaviour:
   Car: {fileID: 1665579992}
   Enemy: {fileID: 768472733846207162, guid: 0a63bf3070825e643a24ef594b93e3ec, type: 3}
   RedEnemy: {fileID: 768472733846207162, guid: 2d80d7be52dac8f418fadcbf90c206da, type: 3}
+  FastEnemy: {fileID: 768472733846207162, guid: b1cb55ac04d9a674fb1ee9800c769699,
+    type: 3}
   spawnEnemy: {fileID: 1057108884}
 --- !u!4 &1891086318 stripped
 Transform:

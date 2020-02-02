@@ -6,6 +6,7 @@ public class TimedEvents : MonoBehaviour
     public carController Car;
     public GameObject Enemy;
     public GameObject RedEnemy;
+    public GameObject FastEnemy;
     public SpawnEnemy spawnEnemy;
     bool Event0 = false;
     bool Event1 = false;
@@ -17,7 +18,7 @@ public class TimedEvents : MonoBehaviour
     {
         if (Car.currentHealth >= 20 && Event0 == false) Spawn0();
         if (Car.currentHealth >= 25 && Event1 == false) Spawn1();
-        if (Car.currentHealth >= 50 && Event2 == false) Spawn2();
+        if (Car.currentHealth >= 40 && Event2 == false) Spawn2();
         if (Car.currentHealth >= 75 && Event3 == false) Spawn3();
 
         void Spawn0 ()
@@ -37,9 +38,7 @@ public class TimedEvents : MonoBehaviour
 
         void Spawn2 ()
         {
-            //Create RedEnemy at SpawnLocation1;
-            //Create RedEnemy at SpawnLocation3;
-            //Create RedEnemy at SpawnLocation4;
+            spawnEnemy.spawnXPatternObject(true,true,true,true, FastEnemy);
             Event2 = true;
         }
 
