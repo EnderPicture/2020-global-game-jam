@@ -1686,6 +1686,8 @@ MonoBehaviour:
   RedEnemy: {fileID: 768472733846207162, guid: 2d80d7be52dac8f418fadcbf90c206da, type: 3}
   FastEnemy: {fileID: 768472733846207162, guid: b1cb55ac04d9a674fb1ee9800c769699,
     type: 3}
+  GreenEnemy: {fileID: 768472733846207162, guid: 2d9be97eaea223e4883ba5b0f4852d3f,
+    type: 3}
   spawnEnemy: {fileID: 1057108884}
 --- !u!82 &1665579994
 AudioSource:
