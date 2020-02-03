@@ -20,7 +20,7 @@ public class carController : MonoBehaviour
     public Player player;
     public Sprite[] carSprites;
     public SpriteRenderer spriteRenderer;
-
+    public GameObject restart;
     public AudioSource carHit;
     public AudioSource carRepair;
 
@@ -37,6 +37,7 @@ public class carController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth == 0) { restart.SetActive(true); }
         if (currentHealth >= 90){
                 spriteRenderer.sprite = carSprites[1];}
         else if (currentHealth >= 80){
