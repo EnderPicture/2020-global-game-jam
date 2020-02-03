@@ -669,6 +669,12 @@ Transform:
   m_Father: {fileID: 1313856705}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &615543815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5494149135508238061, guid: 60bed49cb9d13ab47b519ed8dfdd693f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2056289749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &640509234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1875,6 +1881,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 77fb7769b8d77e240a897baea15d5bf9, type: 3}
   - {fileID: 21300000, guid: 6581ef325be34b54ea3d0b12fe5ccce5, type: 3}
   spriteRenderer: {fileID: 1665579990}
+  restart: {fileID: 615543815}
   carHit: {fileID: 1665579994}
   carRepair: {fileID: 1665579995}
 --- !u!114 &1665579993
