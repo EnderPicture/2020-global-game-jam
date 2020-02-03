@@ -75,6 +75,10 @@ public class enemy : MonoBehaviour
         {
             animator.Play("FlyBoy");
         }
+        else if (type == 4)
+        {
+            animator.Play("BigBearSpriteSheet");
+        }
         movement();
     }
 
