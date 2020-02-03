@@ -22,13 +22,13 @@ public class TimedEvents : MonoBehaviour
     void Update()
     {
         if (Car.currentHealth >= 20 && Event0 == false) Spawn0();
-        if (Car.currentHealth >= 25 && Event1 == false) Spawn1();
+        if (Car.currentHealth >= 30 && Event1 == false) Spawn1();
         if (Car.currentHealth >= 40 && Event2 == false) Spawn2();
         if (Car.currentHealth >= 50 && Event3 == false) Spawn3();
-        //if (Car.currentHealth >= 55) Flying = true;
+        if (Car.currentHealth >= 55) Flying = true;
         if (Car.currentHealth >= 60 && Event4 == false) Spawn4();
         if (Car.currentHealth >= 70 && Event5 == false) Spawn5();
-        //if (Car.currentHealth >= 80 && Event6 == false) Spawn6();
+        if (Car.currentHealth >= 80 && Event6 == false) Spawn6();
 
         void Spawn0 ()
         {
@@ -69,11 +69,11 @@ public class TimedEvents : MonoBehaviour
         spawnEnemy.spawnXPatternObject(true,true,true,true, FastEnemy);
             Event5 = true;
         }
-       // void Spawn6 ()
-       // {
-       // spawnEnemy.spawnXPatternObject(true,false,true,false, GreenEnemy);
-       // spawnEnemy.spawnXPatternObject(true,true,true,true, FastEnemy);
-       //     Event6 = true;
-       // }
+        void Spawn6 ()
+        {
+        spawnEnemy.spawnXPatternObject(true,false,true,false, GreenEnemy);
+        spawnEnemy.spawnXPatternObject(true,true,true,true, FastEnemy);
+            Event6 = true;
+        }
     }
 }
