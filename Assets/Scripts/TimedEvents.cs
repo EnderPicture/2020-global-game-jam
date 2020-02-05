@@ -43,6 +43,8 @@ public class TimedEvents : MonoBehaviour
         {
             spawnEnemy.spawnXPatternObject(true,false,true,false, RedEnemy);
             Event1 = true;
+
+            spawnEnemy.spawnXPatternObject(true, false, true, false, GreenEnemy);
         }
 
         void Spawn2 ()

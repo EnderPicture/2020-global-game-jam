@@ -77,7 +77,7 @@ public class enemy : MonoBehaviour
         }
         else if (type == 4)
         {
-            animator.Play("BigBearSpriteSheet");
+            animator.Play("BigBear");
         }
         movement();
     }
